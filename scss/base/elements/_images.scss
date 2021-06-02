@@ -1,0 +1,27 @@
+.background-image{
+    @include port-background-image($backgroundFrontImageUrl,$color__background-body-a);
+}
+
+
+.imgMedium{display: block;
+  width: 100%;
+  height: auto;
+  background-color: #ffe;
+  margin: 0 auto;
+
+
+    @include tablet{
+        
+        width: 100%; }
+
+}
+.imgBorder{
+  border-radius:1.1em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  
+}
+.imgBorder:hover{
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: scale(1.1);
+  transition: ease 1.5;
+}

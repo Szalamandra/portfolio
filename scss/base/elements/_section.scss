@@ -1,0 +1,104 @@
+section{
+    
+    width:100%;
+    height:fit-content;
+    margin:0;
+    padding:0 auto;
+    background-color: $color__background-body;
+    align-content: center;
+    justify-content: center;
+}
+
+
+//rolam section
+.divRolam{
+    justify-items: center;
+    @include tablet{
+        grid-row-gap: 3vh;
+    }
+}
+#rolamNevDiv{
+    margin: 0 auto;
+    text-align: center;
+    justify-items: center;
+}
+//főcím alatti rész
+#rolamKep{
+    @include port-background-image($url_rolamKep,$color_transparent);
+    align-content: right;
+    background-size:cover;
+    background-attachment: local;
+    background-position: center top;
+    margin-bottom:1.5em;
+  
+
+}
+//div formázása
+#card_app{
+    top:0;
+    margin-bottom:5%;
+    margin-top:0;
+}
+.kisDivRolam{
+    width:30vw;
+    height:100vh;
+      top:0;
+    margin-bottom:5%;
+    margin-top:0;
+    
+
+}
+#rolamCimSzoveg{
+    align-content: left;
+    text-align: left;
+    justify-content: center;
+        text-align: left;
+    justify-content: center;
+    padding: 5%;
+    overflow: scroll;
+    
+      background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow:
+    rgba(black, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset rgba(white, 0.5) 0 0 0 6px;
+  transition: 1s $returnEasing;
+  :hover{
+      color:white;
+      transition: color 3000ms;
+  }
+    font-size:$font__size_medium;
+    @include tablet{
+        font-size: $font__size_text;
+    }
+}
+
+
+//---------------------------------------
+//projektek
+#projectContainer{
+ grid-row:30vh;
+ grid-auto-rows: min-content;
+ @include tablet{
+     grid-template-rows: 1fr;
+ }
+
+}
+.divProject{
+    width: 20vw;
+    height:20vh;
+    margin:4% auto;
+    justify-content: center;
+    grid-column-gap:1%;
+    @include tablet{
+        width: 200px;
+    height:200px;
+    }
+     @include mobile{
+        width: 200px;
+    height:200px;
+    }
+
+}

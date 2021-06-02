@@ -1,0 +1,110 @@
+@import "../../animations/svgAnimations";
+
+.svg_image{
+    max-width: fit-content;
+    max-height: 20vh;
+    max-width: 15wv;
+    //position:absolute; //somehow the grey box dissapears
+}
+
+#women3{
+            background-color:transparent;
+    #planet{
+        path:nth-child(2){
+        @include rotateInfinite;}
+        path:nth-child(3){
+        @include rotateInfinite;}
+        path:nth-child(4){
+        @include rotateInfinite;}
+        path:nth-child(5){
+        @include rotateInfinite;}
+        path:nth-child(6){
+        @include rotateInfinite;}
+    }
+}
+
+//dissapearing the gey box behind the women svg
+.wp-block-code{
+    font-size:0;
+        padding: 0;
+    border: transparent;
+    
+}
+#titleHome{
+    width:50%;
+    display:grid;
+    align-self: center;
+    margin:0 auto;
+    position:relative;
+    left:50wh;
+    font-size:8em;
+    
+   
+}
+
+#titleHome {
+      path:nth-child(1){
+    stroke-width:0;
+    stroke-linecap: square;
+    stroke-opacity: 0.5;
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 200px;
+    @include coloringANDstrokeInOutInfinite;  //it can have just one animation so i have to mix them together
+}
+
+    path:nth-child(2){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 200ms;
+    }
+    path:nth-child(3){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 400ms;
+    }path:nth-child(4){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 600ms;
+    }path:nth-child(5){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 800ms;
+    }path:nth-child(6){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 1000ms;
+    }path:nth-child(7){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 1200ms;
+    }path:nth-child(8){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 1400ms;
+    }path:nth-child(9){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 1600ms;
+    }path:nth-child(10){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 1800ms;
+    }path:nth-child(11){
+    stroke-width:0;
+    stroke-linecap: square;
+    @include coloringANDstrokeInOutInfinite;
+    animation-delay: 2000ms;
+    }
+}
+
+
+

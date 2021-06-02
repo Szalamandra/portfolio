@@ -1,0 +1,42 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 0.5em;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+button{
+	cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 1.1rem;
+  box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.24);
+  &:hover {
+    background-color: lighten(#e1cee3, 20%);
+    box-shadow: 0 0.8rem 1rem 0
+        rgba(0, 0, 0, 0.24),
+      0 1rem 3.2rem 0 rgba(0, 0, 0, 0.19);
+  }
+  &:active {
+    //background-color: lighten(#e1cee3, 30%);
+    box-shadow: 0 0.1rem #666;
+    transform: translateY(4px);
+  }
+}

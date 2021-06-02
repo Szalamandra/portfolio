@@ -1,0 +1,33 @@
+
+//hamburger-icon
+i.fas.fa-bars{
+    color:grey;
+
+    font-size: $socialIkonok_size;
+    &:hover{
+        color:black;
+    }
+}
+
+i.fas.fa-bars.toggle{
+    display:block;
+}
+
+
+//footerben
+
+#socialIkonok {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  z-index:0;
+  font-size:$socialIkonok_size;
+  i {
+          align-self: center;
+    &:nth-child(1) {
+      color: blue;
+    }
+
+  }
+}

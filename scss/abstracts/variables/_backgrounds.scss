@@ -1,0 +1,8 @@
+.blended-gradient{
+  background-blend-mode:exclusion, normal;
+  background:linear-gradient(black 0, white 50%,  black 100%),
+    radial-gradient(black 0, white 70%, black 70.1%);  
+  height:200px;
+  width:200px;}
+
+

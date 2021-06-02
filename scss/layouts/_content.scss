@@ -1,0 +1,87 @@
+
+
+.site-header {
+	grid-area: header;
+	height:10vh;
+  background-color: $color_transparent;
+}
+
+.site-main {
+	grid-area: main;
+	height:90vh;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.site-footer {
+	grid-area: footer;
+	height:10vh;
+}
+
+
+.grid {
+  @include gridCol(1fr, 2, 0%);
+  margin: 0;
+  padding: 1rem;
+  grid-auto-columns: auto-fit;
+}
+.kisGrid{
+  @include gridCol(1fr, 4, 1%);
+  margin:0;
+    grid-auto-columns: auto-fit;
+    //auto row 1 fr lesz ha a kövi sorban nem határozom meg, vagy meghatározom grid-rows: al...
+    grid-auto-rows: 1fr;
+        @include tablet{
+       grid-template-rows: 1fr 1fr;
+    }
+            @include mobile{
+       grid-template-rows: 1fr;
+    }
+
+}
+.gridRow{
+    @include gridRow(1fr, 2, 1%);
+  margin:0;
+    grid-auto-columns: auto-fit;
+    //auto row 1 fr lesz ha a kövi sorban nem határozom meg, vagy meghatározom grid-rows: al...
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    @include tablet{
+       grid-template-columns: 1fr;
+    }
+}
+.kisGridRow{
+    @include gridRow(1fr, 4, 1%);
+  margin:0;
+    grid-auto-columns: auto-fit;
+    //auto row 1 fr lesz ha a kövi sorban nem határozom meg, vagy meghatározom grid-rows: al...
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    @include tablet{
+       grid-template-columns: 1fr;
+    }
+}
+
+
+//index.html
+
+
+
+#frontSection,#rolamSection, #projektSection{
+	height:100vh;
+
+}
+#page{
+   @include port-background-image($backgroundFrontImageUrl, $color__border-button);
+   background-size: cover;
+   background-position:center;
+  top:0;
+  width:100vw;
+}
+#frontSection{
+     @include port-background-image-parralax($backgroundFrontImageUrl, $color_transparent);
+   background-size: contain;
+  //background-blend-mode: lighten;
+  background:$color_transparent;
+  z-index: 0;
+
+}

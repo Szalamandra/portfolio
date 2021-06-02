@@ -1,0 +1,11 @@
+#masthead{
+    /*@include port-background-image($backgroundFrontImageUrl,$color__background-body-a);
+    width:100vw;
+    height:100vh;*/
+    background-color:$color__background-body-a;
+    position:relative;
+    top:0;
+    display:inline-flex;
+    background-color: $color_transparent;
+}
+
