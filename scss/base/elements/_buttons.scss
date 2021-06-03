@@ -40,3 +40,9 @@ button{
     transform: translateY(4px);
   }
 }
+.closeButton{
+outline: none;
+  border: none;
+	background: $color_transparent;
+  font-size: $font__size_medium;
+}

@@ -16,6 +16,7 @@ $color__banner_bg:rgb(163,168,164);
 $color__banner_greyGradient_linear: linear-gradient(0deg, rgba(227,227,205,1) 10%, rgba(163,168,164,1) 69%);
 $gradient_footer: linear-gradient(0deg, rgba(253,203,45,1) 0%, rgba(234,131,131,1) 41%, rgba(220,91,192,1) 70%, rgba(91,156,220,1) 79%, rgba(91,220,176,0.8905311392134979) 89%);
 $gradient_footer_reverz:linear-gradient(0deg, rgba(91,220,176,0.5964134921546744) 0%, rgba(91,156,220,0.5599989263283438) 41%, rgba(220,91,192,0.5908112512583159) 60%, rgba(234,131,131,0.5740045285692401) 72%, rgba(253,203,45,0.6) 89%);
+$gradien_projekt: radial-gradient(circle, rgba(227,227,205,1) 15%, rgba(224,224,203,1) 17%, rgba(166,168,163,1) 62%);
 
 //texts
 
@@ -26,8 +27,9 @@ $color__text-screen: #878d92;
 $color__text-input: #878d92;
 $color__text-input-focus: #111;
 $color__link: #eee; 
-$color__link-visited: rgb(246, 238, 238); //purple
-$color__link-hover: #Df6747; //midnightblue
+$color__link-visited: rgb(246, 238, 238);
+$color__link-hover: #Df6747; 
+$color_text_highlight_light:salmon;
 
 
 //buttons,inputs
@@ -46,3 +48,6 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #Df6747;
 $color__border-abbr: #b42f32;
 */
+
+//cards
+$color_bg_card:rgb(41, 40, 40);

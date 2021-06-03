@@ -12,11 +12,11 @@
     margin: 0;
     
     //box-shadow: 0 3px 3px rgba(99, 88, 88, 0.2);
-    position: absolute;
+    position: inherit;
     border-left: 0px;
     top: 0;
-    z-index: 99999;
-    width: 100%;
+    z-index: 6;
+    width: 90vw;
       li {
             position: relative;
     margin-top:1%;
@@ -164,6 +164,7 @@
       font-weight: 900;
       font-family: font(main);
       align-content: center;
+      
     }
   }//li
 } //menuUlDivMobil
@@ -239,8 +240,9 @@ li.active a{
 .menu li a{
   color:$color__link; 
 &:visited{color:$color__link-visited;}
-&:hover{color:$color__link-hover;}
+&:hover{@include colorOnHover($color__link,$color__link-hover,1000ms);}
 font-weight: bold;
+
 }
 
 

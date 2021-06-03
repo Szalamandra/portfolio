@@ -12,13 +12,15 @@ echo $head;
 
 
 $index= file_get_contents("templates\\index.html");
-$project = file_get_contents("templates\\project.html");
+$project = file_get_contents("templates\\projectBox.html");
 $rolam = file_get_contents("templates\\about.html");
 $form = file_get_contents("templates\\form.html");
 $index = str_replace("{ rolam }", $rolam, $index);
 $index = str_replace("{ form }", $form, $index);
 $index = str_replace("{ projekt }", $project, $index);
 
+$projektek=file_get_contents("templates\\project.html");
+$index = str_replace("{ projektek }", $projektek,$index);
 
 echo $index;
 echo file_get_contents("templates\\foot.html");
