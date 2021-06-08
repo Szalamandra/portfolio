@@ -10,3 +10,31 @@
     rgba(black, 0.66) 0 30px 60px 0,
     inset #333 0 0 0 5px,
     inset rgba(white, 0.5) 0 0 0 6px;
+
+
+$box-shadow-glow:0 0 20px #fff,0 0 20px #fff;
+
+@mixin box-shadow-glow($colorr, $bg_colorr:$color_transparent){
+    box-shadow: 0 0 20px $colorr,0 0 20px $colorr;
+    opacity: 1;
+    background-color: $bg_colorr;
+
+}
+$box-shadow-glow-min:0 0 10px #fff,0 0 10px #fff;
+
+
+  /*  .form button:hover,.form button:active {
+  background: #f0f0f0;
+}
+.form button:focus {
+  box-shadow:0 0 20px #7BB1FF,0 0 20px #7BB1FF;
+  background-color: #5691E6;
+  border-radius: 10px;
+  color: #fff;
+  opacity: 1;
+}
+.form input:focus {
+  box-shadow:0 0 20px #fff,0 0 20px #fff;
+  border-radius: 10px;
+  opacity: 1;
+}*/

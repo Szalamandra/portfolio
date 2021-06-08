@@ -1,0 +1,41 @@
+.aboutAcordion{
+    display:flex;
+    max-height: $font__size_large;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5px;
+    padding: 5px;
+    
+}
+.aboutSzovegek{
+     margin: 0 5px;
+    padding: 5px;
+    text-align:justify;
+    text-indent: $font__size_medium;
+
+}
+.aboutBtn{
+    box-shadow: $box-shadow-glow-min;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    align-self: center;
+    background-color: inherit;
+    opacity: 0.8;
+    padding: 5px 5px;
+}
+
+
+#cvLetoltesDiv{
+    grid-column:span 2;
+    grid-row:span 2;
+    align-self: center;
+    justify-content: center;
+    #cvAboutAcordion{
+        flex-direction: column;
+        max-height: fit-content;
+    margin: 5px;
+    padding: 10px;
+    }
+
+}

@@ -20,7 +20,26 @@ $index = str_replace("{ form }", $form, $index);
 $index = str_replace("{ projekt }", $project, $index);
 
 $projektek=file_get_contents("templates\\project.html");
+$projektWeb = file_get_contents("templates\\projectWeb.html");
+$index = str_replace("{ projektWeb }", $projektWeb,$index);
 $index = str_replace("{ projektek }", $projektek,$index);
+
+
+//form validalas
+
+$formResz="";
+if (isset($_GET['errorSend'])){
+    $formResz="<div class='notLoading'></div>";
+    $index=str_replace("{ formControl }",$formResz,$index);
+
+}
+else{
+    $index = str_replace("{ formControl }", $formResz, $index);
+}
+if (isset($_GET['successSend'])) {
+    echo "Email elküldve";
+}
+
 
 echo $index;
 echo file_get_contents("templates\\foot.html");

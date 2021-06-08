@@ -21,3 +21,14 @@ a {
 		outline: 0;
 	}
 }
+
+#tovabbLink{
+	text-transform:lowercase;
+	font-weight: 500;
+	font-family: "Playfair Display";
+	margin:0;
+	padding:10px;
+	font-size: calc($font__size_medium - 0.5em);
+	text-align: left;
+
+}

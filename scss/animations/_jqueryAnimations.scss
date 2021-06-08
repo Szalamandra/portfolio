@@ -3,6 +3,9 @@
 #particles-js{
     position: relative;
     top:0;
+    bottom:0;
+    left:0;
+    right:0;
     width: 100vw;
     height: 100vh;
     background-color:$color_transparent;
@@ -47,19 +50,7 @@
     font-size: 1.1em;
 }
 
-#stats,
-.count-particles{
-    user-select: none;
-}
 
-#stats{
-    border-radius: 3px 3px 0 0;
-    overflow: hidden;
-}
-
-.count-particles{
-    border-radius: 0 0 3px 3px;
-}
 
 
 

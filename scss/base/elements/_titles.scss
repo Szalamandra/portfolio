@@ -3,7 +3,9 @@ h1.site-title{
     padding: 2% auto;
     position: absolute;
     left:33%;
+    right:33%;
     top:50%;
+    bottom:50%;
     font-size: $font__size_large;
     font-family: map($fontFamily, "headings");
 
@@ -26,3 +28,6 @@ h1.entry-title{
 
 }
 
+#projektH1Nev{
+    
+}

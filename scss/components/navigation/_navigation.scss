@@ -7,16 +7,19 @@
   }
   div {
 
-    display: flex;
+    display: inline-flex;
     list-style: none;
     margin: 0;
-    
-    //box-shadow: 0 3px 3px rgba(99, 88, 88, 0.2);
-    position: inherit;
+    padding-right: 0;
+    //position: fixed;
     border-left: 0px;
     top: 0;
+    right: 1vw;
     z-index: 6;
-    width: 90vw;
+    min-width:800px;
+    max-width: 90vw;
+    flex-wrap: nowrap;
+    left: 25vw;
       li {
             position: relative;
     margin-top:1%;

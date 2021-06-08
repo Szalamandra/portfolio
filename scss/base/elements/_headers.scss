@@ -3,9 +3,14 @@
     width:100vw;
     height:100vh;*/
     background-color:$color__background-body-a;
-    position:relative;
+    position:absolute;
     top:0;
     display:inline-flex;
     background-color: $color_transparent;
+    overflow:hidden;
+    z-index:10;
+    min-height:fit-content;
+    height:20vh;
+    
 }
 

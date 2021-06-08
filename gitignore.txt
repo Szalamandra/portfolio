@@ -4,3 +4,5 @@ node_modules/
 libs/
 !libs/jquery-loader.js
 .build*
+particles.min.js
+jegyzet/
