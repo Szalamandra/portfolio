@@ -8,6 +8,7 @@ section{
     align-content: center;
     justify-content: center;
     overflow: hidden;
+    //position:relative;
 }
 
 
@@ -41,8 +42,8 @@ section{
     margin-top:0;
 }
 .kisDivRolam{
-    width:30vw;
-    height:100vh;
+    width:100%;
+    height:auto;
       top:0;
     margin-bottom:5%;
     margin-top:0;
@@ -51,12 +52,12 @@ section{
 }
 #rolamCimSzoveg{
     display: grid;
-    margin: auto 0;
+    margin: 100px 0;
+    margin-top:110px;
+    height:520px;
     align-content: left;
-    text-align: left;
-    justify-content: center;
         text-align: left;
-    justify-content: center;
+    justify-content: right;
     padding: 5%;
     overflow-y: scroll;
     cursor:pointer;
@@ -68,6 +69,7 @@ section{
     inset #333 0 0 0 5px,
     inset rgba(white, 0.5) 0 0 0 6px;
   transition: 1s $returnEasing;
+  max-width: 340px;
   :hover{
       color:white;
       transition: color 3000ms;

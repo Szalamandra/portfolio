@@ -173,8 +173,7 @@ $('.contact-form').on('submit', function(e) {
       .css({ "color": "purple", "font-weight": "bold" });
 
 
-  if (submitBtn.has("div.notLoading")) {
-  
+  if (submitBtn.children("div").hasClass("notLoading")) {
     setTimeout(function () {
       $this.addClass('notOk');
       $state.html('Üzenet küldése sikertelen! \uf57a').css({ "color": "white", "font-weight": "bold" }).animate();

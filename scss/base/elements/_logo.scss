@@ -10,14 +10,19 @@ img[alt="kep_rolam"]{
 	display:grid;
 	opacity:100%;
 	grid-column: 1/1;
-		max-height:10vh;
-	max-width: 10vh;
-    width: auto;
-	height: auto;
+	max-height:20vh;
+	max-width: 20vh;
 	margin: 4vw;
 	overflow:visible;
 	position: absolute;
 	z-index:5;
+	@include tablet{
+			max-height:10vh;
+	max-width: 10vh;
+    width: auto;
+	height: auto;
+	}
+	
 	
 
 }
@@ -41,22 +46,49 @@ img[alt="kep_rolam"]{
   	left: 50%;
   	transform: translate(-50%, -50%);
 	}
-.logoDiv{
+	.logoDiv{
 	
     display: grid;
-    
+    position:relative;
     grid-column: 1/1;
-    min-height: 10vh;
+	min-height: 10vh;
+    min-width: 10vw;
+	width: 100%;
+    height: 100%;
+	align-content: center;
+	justify-content: center;
+	margin:5px auto;
+    @include tablet{
+		min-height: 10vh;
     min-width: 10vh;
-  
+	margin: 5px auto;
+	
     //margin-top: 4%;
     position: relative;
 	z-index:4;
-	align-content: center;
 	
 
-
-}//.logo-div
+	}
+		&:after{
+		content:'';
+		position:absolute;
+		width:100%;
+		height:100%;
+		@include port-background-image-parralax($url_logo,$color_transparent);
+		background-position: center;
+		background-size: 40%;
+    	margin: 0 0;
+		border-radius:180%;
+		box-shadow: inset 0 0 30px whitesmoke;
+		@include mobile{
+			box-shadow: none;
+			    margin-right: 5px;
+    			left: 30vh;
+				background-size: 100%;
+		}
+	}
+	}//.logo-div
+	
 }//.site-branding
 
 

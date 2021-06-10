@@ -2,7 +2,8 @@
 
 .site-header {
 	grid-area: header;
-	height:10vh;
+	height:20vh;
+  width:100vw;
   background-color: $color_transparent;
 }
 
@@ -83,23 +84,26 @@
 
 
 
-#frontSection,#rolamSection, #projektSection{
-	height:100vh;
+.mainSection{
+	height:auto;
+  width:100%;
+  
+  position:relative;
+
 
 }
 //ez a fő irányító
 #page{
   display:grid;
-  overflow:auto;
   margin:0;
    @include port-background-image($backgroundFrontImageUrl, $color__border-button);
    background-size: cover;
    background-position:center;
   top:0;
-  width:100vw;
+  width:auto;   //ezzel beállítja a szélességet automatice
    &::before{
     content:'';
-    @include overlay_bottom_grey;
+    @include overlay_bottom_dark;
     position:absolute;
     top:0;
     bottom:0;
@@ -109,6 +113,7 @@
   }
 }
 #frontSection{
+    height:100vh;
      @include port-background-image-parralax($backgroundFrontImageUrl, $color_transparent);
    background-size: contain;
   //background-blend-mode: lighten;
@@ -121,7 +126,7 @@
 #formSection{
   background-color: $color__text-main;
   @include port-background-image($url_bg_form,$color__text-main);
-
+  height:100vh;
 
 }
 

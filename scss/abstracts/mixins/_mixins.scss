@@ -108,7 +108,11 @@
     color:$color__text-main;
   }
 
-@mixin overlay_bottom_grey{
+@mixin overlay_bottom_white{
   background: rgb(149,149,149);
 background: linear-gradient(0deg, $color__background-body 3%, rgba(255,255,255,0) 96%);
+}
+@mixin overlay_bottom_dark{
+  background: rgb(149,149,149);
+background: linear-gradient(0deg, $color__background-footer 3%, rgba(0,0,0,0) 96%);
 }

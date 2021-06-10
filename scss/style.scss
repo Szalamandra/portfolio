@@ -32,6 +32,7 @@
 @import "animations/animations";
 @import "animations/svgAnimations";
 @import "animations/jqueryAnimations";
+@import "animations/scroll";
 
 /* Normalize
 --------------------------------------------- */
@@ -54,7 +55,7 @@
 @import "layouts/no-sidebar"; 
 /*change this one, if nothere is -sidebar*/
 @import "layouts/sidebar";
-@import "layouts/header";
+//@import "layouts/header";
 @import "layouts/footer";
 
 

@@ -11,9 +11,8 @@ ol {
 	list-style: decimal;
 }
 
-li > #nemUlDiv,
-li > ul,
-li > ol {
+li > #nemUlDiv
+ {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 	text-decoration: none;
@@ -27,4 +26,17 @@ dt {
 
 dd {
 	margin: 0 1.5em 1.5em;
+}
+
+//bulletpointos list
+.bulletPointList{
+
+	list-style-type:disc;
+	font-weight: 500;
+
+}
+
+#tapasztalatList{
+	list-style-type:"f00c";
+	font-weight: 500;
 }

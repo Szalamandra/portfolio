@@ -1,3 +1,29 @@
+//scroll page-n belül
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html',body).animate({ scrollTop: $($(this).attr('href')).offset().top}, 5000,'linear');
+  });
+});
+
+//scrollTop
+let scrollTopBtn = $('#scrollTopBtn');
+scrollTopBtn.hide();
+setTimeout(function () {
+    
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+            scrollTopBtn.fadeIn();
+        }
+        else
+            scrollTopBtn.fadeOut();
+
+    }
+    );
+}, 5000);
+
+
+
 //targetelni a fv végén id alapján az elemeket
 //scroll hatására eltűnik a szöveg
 (function () {

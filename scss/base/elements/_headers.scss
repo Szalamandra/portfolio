@@ -11,6 +11,10 @@
     z-index:10;
     min-height:fit-content;
     height:20vh;
-    
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    overflow: initial;
+    flex-wrap: nowrap;
 }
 
