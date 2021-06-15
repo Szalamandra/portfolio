@@ -123,6 +123,23 @@
  
 
 }
+#rolamSection{
+  position:relative;
+ &::before{
+  content:'';
+  position: absolute;
+  @include port-background-image($url_bg_horses, $color_transparent);
+  background-size: 100%;
+  height:100%;
+  width:100%;
+   top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 0;
+    opacity: 0.3;
+}
+} //#rolamsection
 #formSection{
   background-color: $color__text-main;
   @include port-background-image($url_bg_form,$color__text-main);
