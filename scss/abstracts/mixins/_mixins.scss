@@ -75,6 +75,16 @@
     @content;
   }
 }
+@mixin tabletDetailRolamPage {
+  @media screen and (max-width: #{$tabletDetailRolamPage}) {
+    @content;
+  }
+}
+@mixin mobileDetailRolamPage {
+  @media screen and (max-width: #{$mobileDetailRolamPage}) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media screen and (max-width: #{$desktop}) {

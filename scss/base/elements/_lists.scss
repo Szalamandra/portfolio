@@ -56,5 +56,19 @@ dd {
 #tulajdonsagList{
 	list-style-type: none;
 	display:flex;
+	    flex-direction: column;
+    
+    margin: 1em 0;
+	line-height: normal;
+	letter-spacing: 2px;
+	white-space: pre-line;
 	
+	li{
+		padding:1em;
+		>i{
+			span{
+			font-family: $font_main2;
+		} //span
+	}
+}
 }

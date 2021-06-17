@@ -45,3 +45,65 @@ i.fas.fa-bars.toggle{
 
   }
 }
+
+//aboutDetailpage
+.hobbiIkons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    justify-content: flex-end;
+    @include mobile{
+    justify-content: center;
+    height: 30%;
+  }
+
+  >i{
+  
+  align-items:center;
+  font-size: 2em;
+  }
+//van két kép,aminek nem találtam ikont
+  > img{
+  width:2em;
+  align-items:center;
+  max-width: 100%;
+  }
+  > h3{
+    text-align: center;
+        text-align: center;
+    display: flex;
+    font-size: 1em;
+    font-variant-caps: all-small-caps;
+    text-indent: 0;
+    padding:1 em;
+  }
+  
+} //.hobbiIkons
+
+.programIkons{
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+    justify-content: flex-end;
+    margin:1em;
+  @include tablet{
+    flex-wrap:wrap;
+    padding:1em;
+  }
+  @include mobile{
+    justify-content: center;
+    height: 50%;
+  }
+  >i{
+  
+  align-items:center;
+  font-size: 2em;
+  }
+
+}
+
+
+.aboutAcordion > i{
+  font-size: 1.5em;
+
+}

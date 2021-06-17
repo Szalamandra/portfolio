@@ -30,7 +30,17 @@
         margin:10px auto 30px auto;
     }
 }
+#mainAboutSectionId{
+    //gap kiszedése
+        grid-row-gap: 0;
+    margin: 0;
+    grid-auto-rows: min-content;
+    @include tabletDetailRolamPage {
+        grid-template-columns: 1fr;
+        
+    }
 
+}
 .aboutAcordion{
     display:flex;
     max-height: $font__size_large;
@@ -38,10 +48,14 @@
     justify-content: space-between;
     margin: 0 5px;
     padding: 5px;
+    white-space: nowrap;
+    flex: 1 1 100%;
+    line-height: normal;
+    padding-bottom:2vh;
     
 }
 .aboutSzovegek{
-     margin: 0 5px;
+     margin: 1em 5px;
     padding: 5px;
     text-align:justify;
     text-indent: $font__size_medium;
@@ -60,61 +74,144 @@
 
 //egyes nagyobb blokkok 
 .aboutGrid{
-    @include tablet{
-    grid-template-rows:minmax(200px, auto-fit) ;
-    grid-template-columns:minmax(200px, auto-fit) ;
     align-content: baseline;
+    @include tabletDetailRolamPage{
+    grid-template-rows:minmax(450px, auto-fit) ;
+    grid-template-columns:minmax(450px, auto-fit) ;
+    
 }//tablet
 }
 #aboutGrid1{
-  @include tablet{ 
+  @include tabletDetailRolamPage{ 
  grid-row: 1/2;
   }
 }
 #aboutGrid2{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 2/3;
     }
 }
 #aboutGrid3{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 3/4;
     }
 }
 #aboutGrid4{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 4/5;
     }
 }
 #aboutGrid5{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 5/6;
     }
 }
 #aboutGrid6{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 6/7;
     }
 }
 #aboutGrid7{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 7/8;
     }
-}
+    #nyelvek{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        div:first-child{
+            position:relative;
+            &:before{
+            content:'';
+            position: absolute;
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            height:100%;
+            @include port-background-image($url_flag_hungary,$color_transparent);
+                background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+
+            } //:before
+            p{
+                position:relative;
+                z-index:1;
+                margin:0 auto;
+                font-weight: bold;
+                text-decoration-style: wavy;
+                text-shadow: 1px 1px 5px grey;
+                text-transform: uppercase;
+            }
+        }//#div:first-child  
+        div:last-child{
+            position:relative;
+            
+            &:before{
+            content:'';
+            position: absolute;
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            height:100%;
+            @include port-background-image($url_flag_england,$color_transparent);
+                background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+
+            } //:before
+              p{
+                position:relative;
+                z-index:1;
+                color:whitesmoke;
+                font-weight: bold;
+                text-decoration-style: wavy;
+                text-shadow: 2px 2px 10px black;
+                text-transform: uppercase;
+            }
+        } 
+    }//#nyelvek
+    }
 #aboutGrid8{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 8/9;
+    }
+    .aboutSzovegek{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 }
 #aboutGrid9{
-    @include tablet{ 
+    @include tabletDetailRolamPage{ 
     grid-row: 9/10;
     }
 }
 #aboutGrid10{
-    @include tablet{ 
+    
+    @include tabletDetailRolamPage{ 
     grid-row: 10/10;
+    } //tabletDetailPage
+
+    .aboutSzovegek{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+    height: fit-content;
+    @include mobile{
+            min-height: 230px;
     }
+    }
+
 }
 
 #cvLetoltesDiv{
