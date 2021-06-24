@@ -17,4 +17,4 @@ $abD = file_get_contents("templates\\aboutDetail.html");
 
 
 echo $abD;
-echo file_get_contents("templates\\foot.html");
+echo file_get_contents("templates\\foot2.html");

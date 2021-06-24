@@ -79,7 +79,7 @@ table.responsive-table{
         border: none;
         background: none;
     }
-}
+} //mobileDetailRolamPage
 tbody:hover td {
 	color: transparent;
 	text-shadow: 0 0 3px #aaa;
@@ -104,25 +104,38 @@ tbody:hover tr:hover td {
    table.responsive-table td:nth-child(1):before{
     content: '';
   }
+ 
   table.responsive-table td:nth-child(2):before{
     content: '';
   }
+
    table.responsive-table td:nth-child(1),
   table.responsive-table td:nth-child(2){
-    padding-left: 5%;
+    
+   
   }
   .dokument:first-child{
     display:flex;
     flex-direction: column;
     flex:1 1 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
     span{
       height:100%;
     }
   }
+  table.display th, table.display td{
+    padding: .5em auto;
+  }
+} //#osztondijtable
+.orszagText{
+  height:100%;
+   display:flex;
+    flex-direction: column;
+    flex:1 1 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
 }
-
 
 //table szürke
 /*

@@ -1,4 +1,23 @@
+
+#aboutBody{
+    width:100vw;
+	position: relative;
+	&:before{
+	@include absolute_layout;
+	content:'';
+	z-index:-1;
+	height:auto;
+	@include port-background-image-parralax($url_bg-aboutPage,$color__background-body);
+	background-size: cover;
+}
+}//aboutBody
+#mastheadAbout{
+    
+        height:2vh;
+    
+}
 #aboutDetailMainFejlec{
+    width:100%;
     #kepBanner{
         position: relative;
         &::before{
@@ -25,6 +44,7 @@
         }
     }
     text-align: center;
+    color:$color__background-screen;
     padding:5vh;
     .middleWhite{
         margin:10px auto 30px auto;
@@ -35,15 +55,26 @@
         grid-row-gap: 0;
     margin: 0;
     grid-auto-rows: min-content;
-    @include tabletDetailRolamPage {
+    background-color: $color_transparent;
+    border-radius:10px;
+    @include desktopDetailRolamPage {
         grid-template-columns: 1fr;
+        position: relative;
         
     }
-
+    &:before{
+        @include absolute_layout;
+        height:auto;
+        content:'';
+        background: $url_bg-aboutPage;
+        z-index:-1;
+        opacity:0.1;
+        
+    }
 }
 .aboutAcordion{
     display:flex;
-    max-height: $font__size_large;
+    min-height: calc($font_size_h2 * 2);
     align-items: center;
     justify-content: space-between;
     margin: 0 5px;
@@ -52,14 +83,21 @@
     flex: 1 1 100%;
     line-height: normal;
     padding-bottom:2vh;
+    color:$color__text-input-focus;
     
 }
 .aboutSzovegek{
      margin: 1em 5px;
     padding: 5px;
     text-align:justify;
-    text-indent: $font__size_medium;
+    text-indent: $font__size_text;
+    display:none;
+    color:$color__text-main;
+    @include fadeIn(500ms);
 
+}
+.noDisplayPage{
+    display:none !important;
 }
 .aboutBtn{
     box-shadow: $box-shadow-glow-min;
@@ -75,47 +113,48 @@
 //egyes nagyobb blokkok 
 .aboutGrid{
     align-content: baseline;
-    @include tabletDetailRolamPage{
+    @include desktopDetailRolamPage{
     grid-template-rows:minmax(450px, auto-fit) ;
     grid-template-columns:minmax(450px, auto-fit) ;
     
 }//tablet
 }
 #aboutGrid1{
-  @include tabletDetailRolamPage{ 
+  @include desktopDetailRolamPage{ 
  grid-row: 1/2;
   }
 }
 #aboutGrid2{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 2/3;
     }
 }
 #aboutGrid3{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 3/4;
     }
 }
 #aboutGrid4{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 4/5;
     }
 }
 #aboutGrid5{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 5/6;
     }
 }
 #aboutGrid6{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 6/7;
     }
 }
 #aboutGrid7{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 7/8;
     }
     #nyelvek{
+      
         display:flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -176,31 +215,34 @@
                 text-transform: uppercase;
             }
         } 
+          display:none;
     }//#nyelvek
     }
 #aboutGrid8{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 8/9;
     }
-    .aboutSzovegek{
+    .aboutSzovegek.plusz{
         display:flex;
         flex-direction:row;
         justify-content: space-around;
         flex-wrap: wrap;
+         display:none;
     }
 }
+
 #aboutGrid9{
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 9/10;
     }
 }
 #aboutGrid10{
     
-    @include tabletDetailRolamPage{ 
+    @include desktopDetailRolamPage{ 
     grid-row: 10/10;
     } //tabletDetailPage
 
-    .aboutSzovegek{
+    .aboutSzovegek.plusz{
         display:flex;
         flex-direction:row;
         justify-content: space-around;

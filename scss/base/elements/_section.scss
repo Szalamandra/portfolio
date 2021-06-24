@@ -56,6 +56,8 @@ section{
     margin: 100px 0;
     margin-top:110px;
     height:520px;
+    opacity:1;
+    color:$color__background-hr;
     align-content: left;
         text-align: left;
     justify-content: right;
@@ -71,34 +73,100 @@ section{
     inset rgba(white, 0.5) 0 0 0 6px;
   transition: 1s $returnEasing;
   max-width: 340px;
-  :hover{
+  &:hover{
       color:white;
-      transition: color 3000ms;
+      opacity:0.6;
+      transition: color 2000ms, opacity 4000ms ease;
       ::-ms-tooltip{
           content: "Bővebben...";
       }
-  }
+  } //:hover
+  
+    &:hover .middle {
+        opacity: 1;
+        }
+
     font-size:$font__size_medium;
     @include tablet{
         font-size: $font__size_text;
     }
+    div p{
+        line-height: 3em;
+    }
+} #rolamCimSzoveg
+    
+.burkolo {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.textRolamCim{
+   text-transform: capitalize;
+  font-size: 16px;
+   a{
+  background-color: rgba(0,0,0,0.6);
+  color: white;}
+  padding: 16px 32px;
+  border-radius:10px;
+  
+    :hover{
+        background-color: rgba(0,0,0,1);
+    }
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 
 //---------------------------------------
 //projektek nagyban
+#szoftProject::before,#webProject::before{
+ @include absolute_layout;
+ content:'';
+
+}
+
 #szoftProject,#webProject{
+    position: relative;
     align-items: normal;
     padding: 5%;
     overflow: revert;
-        width: 40vw;
-         cursor:pointer;
+    width: 40vw;
+    min-width: 300px;
+    cursor:pointer;
+    
+     @include tablet{
+        min-width: auto;
+        width: 70vw;
+    }
     h1{
+        //hogy a particletol rá lehessen kattintani
+        
+    position: relative;
+        z-index: 10;
+        display: flex;
+    justify-content: center;
+    padding: inherit;
     text-align: center;
-    font-size: $font__size_text;
+    font-size: $font__size_h1_mod;
     opacity:0.6;
     color:$color_text-main_light;
     color:$color_text_highlight_light;
+          text-align: center;
+    margin: auto;
+    top: 25%;
+  @include mobile{
+    font-size:1.5rem;
+  }
     &:hover{    
     @include fadeIn(1000ms);
      transform:scale(1.2);
@@ -106,18 +174,18 @@ section{
         }
     @include tablet{
         text-size-adjust: auto;
-        font-size: $font__size_medium;
-    }
-}} //#szoftProjekt, #webProjekt
+        //font-size: $font__size_medium;
+    }//h1
+}} //#szoftProjekt, #webProjekt ezeket átírni #particles-js
 
 //altalanos formazasa a felugro ablakoknak (#projectBoxContainer)
 .projekt_container{
     display:none;
     width:95vw;
-    height:95vh;
+    //min-height: 95vh;
+    //height:auto;
     position:fixed;
     top:1%;
-    bottom:1%;
     left:1%;
     right:1%;
     background-color:$color__background-body;
@@ -125,15 +193,32 @@ section{
     box-shadow: $black_white_box2;
     border-radius: $border_radius;
     z-index:10;
-   overflow:hidden;
+    @include tablet{
+    overflow:overlay; 
+    padding: 3vh 0;
+    }
     //felugrodoboz belsejének formázása
    #projectContainerSzoft{
+       overflow:initial;
+       z-index: 15;
+       max-height:95vh;
+       @include tablet{
+           box-sizing:border-box;
+           display:contents;
+           position: absolute;  //hogy a nagyobb tart. mozogni tudjon
+           overflow-y:auto;
+           width:98vw;
+       min-height:800px;
+        }//#tablet
     #projektCimDivMod{
     display:grid;
         height: 35vh;
     min-height: fit-content;
     width: 98%;
     margin-top: 2%;
+    .middleSalmon{
+        margin-top:0.3em;
+    }
     #projektNev{
         display:grid;
         text-align: center;
@@ -142,7 +227,7 @@ section{
         //margin: 0 auto;
         //padding-top:0;
         justify-items: center;
-        font-size: $font__size_medium;
+        font-size: $font_size_h1;
         opacity:0.6;
         color:$color_text-main_light;
         color:$color_text_highlight_light;    
@@ -152,24 +237,33 @@ section{
             }
         @include tablet{
             text-size-adjust: auto;
-            font-size: $font__size_medium;
+            //font-size: $font__size_medium;
     }
 }//#projektCimDivMod
-    #particles-js{
-        width:100%;
-        height:100%;
-    }
+
  }//projectContainerSzoft
 } //project_container
 
+#projectContainerFoOldal{
+    padding-bottom:1rem;
+    grid-template-rows: 30% 1fr;
+@include tablet{
+           grid-template-rows: 1fr;
+       }
+    }
 //projektek
 //ez a felugró ablak igazabol projektek
 #projectBoxContainer{
     display:grid;
  grid-row:30vh;
  grid-auto-rows: min-content;
+ max-height: 96vh;
+    overflow: hidden;
+    width: 98vw;
+    @include acrylic($url_bg_form,20px);
  @include tablet{
-     grid-template-rows: 1fr;
+
+    // grid-template-rows: 1fr;
  }
 
 }
@@ -203,8 +297,10 @@ section{
     cursor:pointer;
     font-size: $font__size_text;
     @include tablet{
+        
         width: 200px;
     height:200px;
+   
     }
      @include mobile{
          font-size: $font__size_text;
@@ -220,12 +316,18 @@ section{
     background-size: contain, cover;
     background-repeat: no-repeat;
     background-attachment: local;
-
+    overflow-y: auto;
+   width: 200px;
+    height:200px;
 }
 #cSharpProject{
     @include port-background-image-parralax($url_bg-c,$color__background-hr);
     background-position: center;
     background-size: cover;
+        overflow-y: auto;
+   width: 200px;
+    height:200px;
+    overflow-y: auto;
 }
 
 
@@ -233,6 +335,10 @@ section{
     @include port-background-image-parralax($url_bg_java,$color_bg_java);
     background-position: center;
     background-size: contain;
+        overflow-y: auto;
+   width: 200px;
+    height:200px;
+    overflow-y: auto;
 }
 
 //webes progis doboz
@@ -240,3 +346,25 @@ section{
     text-align: center;
     padding-top:30px;
 }
+#webBoxContainer{
+    max-height:96vh;
+    overflow:hidden;
+}
+#projectWebContainer{
+      grid-template-rows: 25% 1fr;
+    overflow: visible;
+    
+    margin: 0 auto 0%;
+    max-height: 150vh;
+    height: 90vh;
+    
+  
+    @include tablet{
+        height: 86vh;
+       
+    }
+#webCimDivMod{
+    grid-row:1/2;
+    height:30%;
+}
+}//projectWebContainer

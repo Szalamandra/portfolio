@@ -1,3 +1,5 @@
+//mixin van a background nal is
+
 // Center block
 @import "breakpoints";
 
@@ -35,6 +37,12 @@
   color: set-text-color($color);
 }
 
+//apply to the child
+@mixin scrollBarHide(){
+  margin-right: -50px; /* Maximum width of scrollbar */
+  padding-right: 50px; /* push the content back*/
+  overflow-y: auto;
+}
 
 
 @mixin gridCol($gridpixel, $itemDb, $gap) {
@@ -88,6 +96,12 @@
 
 @mixin desktop {
   @media screen and (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktopDetailRolamPage {
+  @media screen and (max-width: #{$desktopDetailRolamPage}) {
     @content;
   }
 }

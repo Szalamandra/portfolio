@@ -23,12 +23,16 @@ a {
 }
 
 #tovabbLink{
-	text-transform:lowercase;
+	text-transform:capitalize;
 	font-weight: 500;
 	font-family: "Playfair Display";
 	margin:0;
-	padding:10px;
+	padding:1.5rem;
+	border-radius: 8px;
 	font-size: calc($font__size_medium - 0.5em);
 	text-align: left;
+	:hover{
+		color:bisque;	
+	}
 
 }

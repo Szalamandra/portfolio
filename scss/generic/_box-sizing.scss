@@ -9,6 +9,9 @@
 
 html {
   box-sizing: border-box;
-  white-space: pre-line;
 
+}
+
+::-webkit-scrollbar{
+  display:none;
 }

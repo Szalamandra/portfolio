@@ -9,7 +9,7 @@ $('document').ready(function () {
   
    
   let projectBox = $('#projectBoxContainer');
-  let szoftProject = $('#szoftProject');
+  let szoftProject = $('#szoftProject h1');
   let projectCloseButton = $('#projektCloseBtn');
   let projektCim = $('#projektNev');
 
@@ -29,7 +29,29 @@ $('document').ready(function () {
   function buttonZar() {
     submitBtn.attr("disabled","disabled");
   }
- 
+
+  function h1HatraKuldes() {
+    nyitoProjektWebBtn.css({ "z-index": 8 });
+    szoftProject.css({ "z-index": 8 });
+  };
+  function boxFunctionsNyitasnal() {
+    h1HatraKuldes();
+    bodyScrollOff();
+  }
+  function boxFunctionsClose() {
+    h1Vissza();
+    bodyScroll();
+  }
+  function h1Vissza() {
+     nyitoProjektWebBtn.css({ "z-index": 10 });
+    szoftProject.css({ "z-index": 10 });
+  }
+  function bodyScrollOff() {
+    $('body').css({ 'overflow': 'hidden' });
+  }
+  function bodyScroll() {
+    $('body').css({ 'overflow': 'auto' });
+  }
   /*$(function () {
     projectBox.dialog({
       autoOpen: false,
@@ -41,37 +63,41 @@ $('document').ready(function () {
   });*/
     projectBox.hide();
   szoftProject.on('click', function(){
-    projectBox.show(1000);
+    projectBox.show(1000).css({"display":"inline-block","overflow":"visible"});
+    
     projektCim.fadeIn(1000).css( "transform","scale(1.2)",
-        "transition","transform 1000ms");
+      "transition", "transform 1000ms");
+    boxFunctionsNyitasnal();
+    
     /*start particles*/
    /* particlesJS.load('particles-p-js', 'particles_p.json', function() {
   console.log('particles.js loaded - callback');
     });*/
     
-
-
   });
 
   projectCloseButton.on('click', function(e){
     projectBox.hide(1000);
     e.stopPropagation();
+    boxFunctionsClose();
   });
   
 
 //webes doboz interakciói
-  let nyitoProjektWebBtn = $("#webProject");
+  let nyitoProjektWebBtn = $("#webProject h1");
   let closeButtonWeb = $('#projektCloseBtnWeb');
   let webBoxContainer = $('#webBoxContainer');
 
 
   nyitoProjektWebBtn.on('click', () => {
     webBoxContainer.toggle(1000);
+    boxFunctionsNyitasnal();
   } )
 
   closeButtonWeb.on('click', function (e) {
     webBoxContainer.hide(1000);
     e.stopPropagation();
+    boxFunctionsClose();
   }
   );
 
@@ -205,7 +231,10 @@ $('.contact-form').on('submit', function(e) {
 });
 
 
-
+//mobilemenu hatteradása
+  if(window.length == 600){
+    $("#menuUlDivMobil").addClass('acrylic');
+  }
 
 });  //document ready
 

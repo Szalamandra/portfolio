@@ -7,3 +7,21 @@ h6 {
 	clear: both;
 	line-height: normal;
 }
+h1{
+    font: size $font_size_h1;
+}
+h2{
+    font-size:$font_size_h2;
+}
+h3{
+    font-size:$font_size_h3;
+}
+
+.aboutH2{
+	@include desktop{
+		font-size: 2rem;
+		white-space: pre-wrap;
+		text-align: center;
+
+	}
+}
