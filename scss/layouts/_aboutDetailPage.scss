@@ -92,7 +92,7 @@
     text-align:justify;
     text-indent: $font__size_text;
     display:none;
-    color:$color__text-main;
+    color:$color__text_about;
     @include fadeIn(500ms);
 
 }
@@ -153,9 +153,9 @@
     @include desktopDetailRolamPage{ 
     grid-row: 7/8;
     }
-    #nyelvek{
+    .aboutSzovegek.plusz{
       
-        display:flex;
+        display:flex !important;
         flex-direction: row;
         justify-content: space-evenly;
         div:first-child{
@@ -184,6 +184,7 @@
                 text-decoration-style: wavy;
                 text-shadow: 1px 1px 5px grey;
                 text-transform: uppercase;
+                
             }
         }//#div:first-child  
         div:last-child{
@@ -223,7 +224,7 @@
     grid-row: 8/9;
     }
     .aboutSzovegek.plusz{
-        display:flex;
+        display:flex !important;
         flex-direction:row;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -243,7 +244,7 @@
     } //tabletDetailPage
 
     .aboutSzovegek.plusz{
-        display:flex;
+        display:flex !important;
         flex-direction:row;
         justify-content: space-around;
         flex-wrap: wrap;

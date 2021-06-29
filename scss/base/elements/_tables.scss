@@ -14,14 +14,24 @@ table.layout{
 table.display{
   margin: 1em 0;
 }
-table.display th,
-table.display td{
-  border: 1px solid $color_text_highlight;
+table.display th{
+  border: 3px solid $color_text_highlight;
   padding: .5em 1em;
+  text-align:center;
+  font-size:$font_size_h3;
+  text-shadow: $text-shadow_black;
+}
+table.display td{
+  border: 3px solid $color_text_highlight;
+  padding: .5em 1em;
+  text-align:center;
+  font-size: $font__size_table_desktop;
+  @include tablet{
+  font-size:$font__size_table;}
 }
 
 table.display th{ background: lighten($color_text_highlight_light,0.4); }
-table.display td{ background: #fff; }
+table.display td{ background:$color_table_bg; }
 
 table.responsive-table{
   box-shadow: $box_shadow_light;
@@ -109,18 +119,14 @@ tbody:hover tr:hover td {
     content: '';
   }
 
-   table.responsive-table td:nth-child(1),
-  table.responsive-table td:nth-child(2){
-    
-   
-  }
+ 
   .dokument:first-child{
-    display:flex;
+    display:table-cell;
     flex-direction: column;
     flex:1 1 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr auto;
+  
     span{
+      display:flex;
       height:100%;
     }
   }

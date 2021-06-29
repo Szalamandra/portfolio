@@ -14,6 +14,8 @@ $font__line-height-pre: 1.6;
 $font__size_large:3em;
 $font__size_medium:1.5em;
 $font__size_text:clamp(1rem, 1.25vw, 1.25rem);
+$font__size_table:clamp(1rem, 1vw, 1rem);
+$font__size_table_desktop:clamp(1.3rem, 1vw, 1rem);
 $font_size_h1:clamp(2rem, 5vw, 5rem);
 $font__size_h1_mod:clamp(2rem, 5vw, 1.25rem);
 $font_size_h2:clamp(1.8rem, 4vw, 4rem);

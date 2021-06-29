@@ -229,8 +229,7 @@ section{
         justify-items: center;
         font-size: $font_size_h1;
         opacity:0.6;
-        color:$color_text-main_light;
-        color:$color_text_highlight_light;    
+        color:$color__hamburger;    
         @include fadeIn(1000ms);
         transform:scale(1.2);
         transition: transform 1000ms;

@@ -104,8 +104,16 @@ $border_radius:2vw;
     &:nth-child(3):before {
       background-image: $url_card_muv;}
      &:nth-child(4):before {
-      background-image: $url_card_fogy;
-     }
+      background-image: $url_card_fogy;}
+     &:nth-child(5):before {
+      background-image:$url_card_tanTeka;
+          background-size: 169%;
+    background-position: center top;
+    }
+    &:nth-child(6):before {
+      background-image:$url_card_filmek;
+
+    }
 
 }
 
@@ -234,6 +242,7 @@ $border_radius:2vw;
       overflow:hidden;
       margin:0;
       padding:0.5rem;
+      height:50px;
      
     }
     .copy{

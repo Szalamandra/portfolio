@@ -6,6 +6,9 @@ $('document').ready(function () {
   particlesJS.load('particles-js', 'particles.json', function () {
     console.log('particles.js loaded - callback');
   });
+  particlesJS2.load('particles-js-web', 'particles2.json', function () {
+    console.log('particles2.js loaded - callback');
+  });
   
    
   let projectBox = $('#projectBoxContainer');

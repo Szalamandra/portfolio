@@ -40,11 +40,11 @@ dd {
 	margin:0;
 	li{
 		list-style-type:disc;
-	list-style-type:"\f00c";
+	
 
 		list-style: inside;
 	&::before {
-  	content: "\f00c"; /* FontAwesome Unicode */
+  	content: ""; /* FontAwesome Unicode */
   	font-family: 'my-icon-font';
   	display: inline-block;
   	margin-left: -1.3em; /* same as padding-left set on li */

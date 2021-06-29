@@ -36,3 +36,29 @@ a {
 	}
 
 }
+
+#formazatlanLink{
+	position:absolute;
+	color:inherit;
+	font-family: "Playfair Display";
+	text-transform: capitalize;
+	    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.gitHubLink{
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-visited;
+	}
+}
+.gitHubLink:hover{
+	border-radius:10px;
+	color:lighten($color__text-input-focus,40%);
+	background-color:lighten($color__link-visited,41%);
+	opacity: 0.6;
+	transition: all 500ms ease-in;
+
+}
