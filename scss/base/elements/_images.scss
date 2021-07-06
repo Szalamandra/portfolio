@@ -32,4 +32,104 @@
   height:auto;
   border:1px solid grey;
 
-}   
+}  
+.imgBox{
+  max-width:wmax(50vw);
+  max-height:vmax(50vh);
+  
+  &#kep1::after{
+    content:'';
+    width:50%;
+    height:auto;
+    position: absolute;
+    top:1rem;
+    bottom:0;
+    left:0;
+  
+    //@include blurBorderWithBg(0,0,0,$url_lo_ego);
+    background-image:$url_lo_ego ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index:-1;
+    @include tablet{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 3rem;
+    }
+    } //#kep1::after
+
+    
+    &#kep1{
+      @include tablet{
+      @include acrylic($url_lo_ego,8px);
+    
+      }
+
+    
+    } //#kep1
+    &#kep4{
+      position:relative;
+    }
+    &#kep4::after{
+       content:'';
+    width:100%;
+    height:auto;
+    position: absolute;
+    top:1rem;
+    bottom:0;
+    left:0;
+  
+    //@include blurBorderWithBg(0,0,0,$url_lo_ego);
+    background-image:$url_uton;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index:0;
+    @include tablet{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 3rem;
+    
+    
+
+    }
+
+  }
+
+
+
+&#kep2{
+  width:100%;
+  @include blurBorderWithBg(2px,blur(5px),inset(1px), $url_laptop_study);
+      background-position: center;
+      @include tablet{
+        grid-row: 4/5;
+        margin-bottom:2rem;
+      }
+}//#kep2
+&#kep3{
+  width:100%;
+  @include blurBorderWithBg(1rem,blur(5px),inset(0), $url_working_place);
+  }
+
+
+
+}//.imgBox
+
+
+.blurBorderSmall{
+  @include blurBorder();
+
+}
+
+//ami a #kep1
+#kep1{
+  width: 80%;
+  height:auto;
+}
+#img3{
+  width: 50%;
+  height:auto;
+}
+

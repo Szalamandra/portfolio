@@ -17,3 +17,44 @@ p{
 
 @import "headings";
 @import "copy";
+
+
+//aboutdetailpage-n a profil szekció
+.profilText{
+	padding-bottom:2rem;
+	margin:0 1.5rem;
+	position: relative;
+	text-shadow: $text_shadow_min;
+	p{
+		background-color: lighten($color__text-main,10%);
+		padding:0.5rem;
+		border-radius:$border-radius_medium;
+		line-height:$font__line-height-pre;}
+	@include tablet{
+			color:$color__text-main;
+			font-weight: 620;
+		}
+	&:nth-of-type(4){
+			@include acrylic($url_bg_form,8px);
+			border-radius:$border-radius_medium;
+			box-shadow: $box_shadow_light_inset;
+			box-shadow: $box_shadow_light;
+			margin:0;
+			padding:1.5rem;
+			p{
+				padding:1rem;
+				@include tablet{
+			color:$color__text_about;
+		}
+			}
+			}//nth-of-type(4)
+	 &:nth-of-type(8) {
+		 grid-column: span 2;
+    
+		p{color:$color__text_about;}
+  }
+		
+	}//profilText
+
+
+
