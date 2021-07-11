@@ -95,7 +95,19 @@ $('document').ready(function () {
   nyitoProjektWebBtn.on('click', () => {
     webBoxContainer.toggle(1000);
     boxFunctionsNyitasnal();
-  } )
+    /*if ($(window).width() < 500) {
+      simpleBarBox[0].setAttribute('data-simplebar');
+    }*/
+   
+
+  });
+  
+  function simpleBarToggle() {
+     if ($(window).width() < 500) {
+      simpleBarBox[0].toggleAttribute('data-simplebar');
+    }
+  };
+
 
   closeButtonWeb.on('click', function (e) {
     webBoxContainer.hide(1000);
@@ -103,6 +115,21 @@ $('document').ready(function () {
     boxFunctionsClose();
   }
   );
+/*simplebar  remove if resize
+  let simpleBarBox = $('#simple-bar');
+  $(window).resize(function(){
+    if ($(window).width() > 500 && simpleBarBox[0].hasAttribute('data-simplebar')) {
+      simpleBarBox.removeAttr("data-simplebar");
+    }
+    else {
+      simpleBarBox[0].setAttribute('data-simplebar');
+    };
+
+
+  });
+
+  */    
+  
 
 
 //form validálás

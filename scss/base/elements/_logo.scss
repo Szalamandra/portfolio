@@ -57,12 +57,12 @@ img[alt="kep_rolam"]{
     height: 100%;
 	align-content: center;
 	justify-content: center;
-	margin:5px auto;
+	margin: 10px 2vh;
     @include tablet{
 		min-height: 10vh;
     min-width: 10vh;
 	margin: 5px auto;
-	
+	    
     //margin-top: 4%;
     position: relative;
 	z-index:4;
@@ -72,14 +72,14 @@ img[alt="kep_rolam"]{
 		&:after{
 		content:'';
 		position:absolute;
-		width:100%;
-		height:100%;
+		width:150px;
+		height:150px;
 		@include port-background-image-parralax($url_logo,$color_transparent);
 		background-position: center;
-		background-size: 40%;
+		background-size: 75%;
     	margin: 0 0;
 		border-radius:180%;
-		box-shadow: inset 0 0 30px whitesmoke;
+		box-shadow: inset 0 0 18px whitesmoke, $box-shadow-glow;
 		@include mobile{
 			box-shadow: none;
 			    margin-right: 5px;

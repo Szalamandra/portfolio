@@ -14,10 +14,11 @@ $border_radius:2vw;
 .page-content {
   display: grid;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding-top: 1rem;
   max-width: 1024px;
   max-height:80vh;
   margin: 0 auto;
+  overflow: auto;
      
     grid-template-columns: repeat(4, 1fr);
      @include tabletDetailRolamPage {
@@ -28,6 +29,7 @@ $border_radius:2vw;
   }
    @include mobileDetailRolamPage {
     grid-template-columns: 1fr;
+    overflow:scroll;
   }
 }
 
@@ -49,6 +51,7 @@ $border_radius:2vw;
     0 4px 4px rgba(0,0,0,0.1), 
     0 8px 8px rgba(0,0,0,0.1),
     0 16px 16px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
   
   
   &:before {
@@ -258,3 +261,85 @@ $border_radius:2vw;
 
 
 }
+
+/*ehhez szerkezet: 	
+<div class="classt ahova includeolom ezt">  
+<div class="foto"><img src="" alt="" />
+				<div class="shadow"></div>
+		</div>
+			<p>Grapes</p>
+		</div>*/
+@mixin domborkepkartyaFelirattal( $box-shadowDombor:inset 0px 0px 31px 5px rgba(0,0,0,0.75), $border-radius-card:10px 10px 5px 5px){
+    	&:hover img{
+		transform: scale(1.1);	
+	    }
+      .foto{
+        width:100%;
+        height:100%;
+        margin:0;
+        border-radius:3px;
+        overflow: hidden;
+        border-radius:0 0 5px 5px;
+        img{
+          width:100%;
+          height:auto;
+          transition: all 0.2s ease-in-out;
+        }
+        .shadow {
+        position: absolute;
+        width: 100%;
+        height: 460px;
+        box-shadow: $box-shadowDombor;
+        top: 0px;
+        left: 0;
+        border-radius: $border-radius-card ;
+
+          } //.shadow
+        } //.foto
+      
+    	p{
+		font-family: 'Lobster', cursive;
+		font-size:180%;
+		position: absolute; 
+    top: 100px; 
+		left:0;
+		width: 100%; 
+		color: white; 
+   	letter-spacing: -1px;  
+   	background: rgba(0, 0, 0, 0.3);
+		opacity:.7;
+	}
+
+
+} //domborkartyafelirattal
+
+ @mixin domborkepkartya($box-shadowDombor:inset 0px 0px 31px 5px rgba(0,0,0,0.75), $border-radius-card:10px 10px 5px 5px){
+    	&:hover img{
+		transform: scale(1.1);	
+	    }
+      .foto{
+        width:100%;
+        height:100%;
+        margin:0;
+        border-radius:3px;
+        overflow: hidden;
+        border-radius:0 0 5px 5px;
+        img{
+          width:100%;
+          height:auto;
+          transition: all 0.2s ease-in-out;
+        }
+        .shadow {
+        position: absolute;
+        width: 100%;
+        height: 460px;
+        box-shadow: $box-shadowDombor;
+        top: 0px;
+        left: 0;
+        border-radius: $border-radius-card;
+
+      } //.shadow
+        } //.foto
+ 
+
+} //domborkartya

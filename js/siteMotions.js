@@ -168,7 +168,7 @@ var vh = window.innerHeight,
     mg = new mg_scroll_animate({
         element  : 'foCimDiv',
         property : ['opacity','pos.top'],
-        from     : ['1', '100'],
+        from     : ['1', '150'],
         to       : ['0', '300'],
         posStart : [vh/100*1, vh/100*1],
         posEnd   : [vh/100*30, vh/100*30]

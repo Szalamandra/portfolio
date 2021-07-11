@@ -38,6 +38,15 @@ dd {
 
 #tapasztalatList{
 	margin:0;
+	line-height: 2rem;
+    letter-spacing: 0.1rem;
+	    background-color: rgba($color__background-footer,0.4);
+		
+    border-radius: $border-radius_medium;
+	box-shadow: $box-shadowDombor;
+    padding: 1rem;
+    font-weight: 500;
+	
 	li{
 		list-style-type:disc;
 	
@@ -54,6 +63,18 @@ dd {
 }
 
 #tulajdonsagList{
+	margin-left:1rem;
+			@include acrylic($url_bg_form,8px);
+			border-radius:$border-radius_medium;
+			box-shadow: $box_shadow_light_inset;
+			box-shadow: $box_shadow_light;
+			margin:0;
+			padding:1.5rem;
+			
+				@include tablet{
+			color:$color__text_about;
+		
+			}
 	list-style-type: none;
 	display:flex;
 	    flex-direction: column;

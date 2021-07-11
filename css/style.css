@@ -661,7 +661,7 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
+  font-size: clamp(2rem, 5vw, 1.25rem);
   margin: 0.67em 0;
 }
 
@@ -1067,7 +1067,7 @@ big {
 }
 
 .profilText p {
-  background-color: #626267;
+  background-color: rgba(98, 98, 103, 0.3);
   padding: 0.5rem;
   border-radius: 6px;
   line-height: 1.6;
@@ -1080,7 +1080,12 @@ big {
   }
 }
 
+.profilText:nth-of-type(2), .profilText:nth-of-type(1) {
+  margin-left: 1rem;
+}
+
 .profilText:nth-of-type(4) {
+  margin-right: 1rem;
   border-radius: 6px;
   box-shadow: 1px 3px 10px inset;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
@@ -1128,12 +1133,102 @@ big {
   }
 }
 
+.profilText:nth-of-type(7) {
+  margin-left: 1rem;
+  border-radius: 6px;
+  box-shadow: 1px 3px 10px inset;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.profilText:nth-of-type(7):before {
+  background: url("../includes/img/bg-form.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  filter: blur(8px);
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  z-index: -1;
+}
+
+.profilText:nth-of-type(7):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+.profilText:nth-of-type(7) p {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 760px) {
+  .profilText:nth-of-type(7) p {
+    color: aliceblue;
+  }
+}
+
 .profilText:nth-of-type(8) {
   grid-column: span 2;
+  border-radius: 6px;
+  box-shadow: 1px 3px 10px inset;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.profilText:nth-of-type(8):before {
+  background: url("../includes/img/bg-form.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  filter: blur(8px);
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  z-index: -1;
+}
+
+.profilText:nth-of-type(8):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+  border: 1px solid #fff;
+  background: #fff;
 }
 
 .profilText:nth-of-type(8) p {
-  color: aliceblue;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 760px) {
+  .profilText:nth-of-type(8) p {
+    color: aliceblue;
+  }
 }
 
 /* Elements
@@ -1151,11 +1246,26 @@ body {
 }
 
 body #foCimDiv {
-  font-family: map((heading: "'Comic Sans MS', cursive, sans-serif", main: "'Comic Sans MS', arial, helvetica", homepageTitle: "'Gloria Hallelujah', cursive"), "homepageTitle");
+  font-family: "Comic Sans MS", cursive, sans-serif;
   position: absolute;
   top: 30vh;
   left: 30%;
   color: #f1f1f1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body #foCimDiv h1, body #foCimDiv hr, body #foCimDiv h2 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  body #foCimDiv {
+    /* z-index: 13; */
+    overflow: visible;
+  }
 }
 
 .breakBanner {
@@ -1205,10 +1315,11 @@ body #foCimDiv {
 .page-content {
   display: grid;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding-top: 1rem;
   max-width: 1024px;
   max-height: 80vh;
   margin: 0 auto;
+  overflow: auto;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -1227,6 +1338,7 @@ body #foCimDiv {
 @media screen and (max-width: 560px) {
   .page-content {
     grid-template-columns: 1fr;
+    overflow: scroll;
   }
 }
 
@@ -1242,6 +1354,7 @@ body #foCimDiv {
   height: 350px;
   background-color: whitesmoke;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 .card-work:before {
@@ -1436,6 +1549,13 @@ body #foCimDiv {
   margin-bottom: 0;
 }
 
+/*ehhez szerkezet: 	
+<div class="classt ahova includeolom ezt">  
+<div class="foto"><img src="" alt="" />
+				<div class="shadow"></div>
+		</div>
+			<p>Grapes</p>
+		</div>*/
 hr {
   background-color: #ccc;
   border: 0;
@@ -1467,6 +1587,12 @@ hr#hrfrontPage {
   height: 0.2em;
   width: 30%;
   color: #878d92;
+}
+
+.middleDarkGrey {
+  height: 0.2em;
+  width: 30%;
+  color: #49494d;
 }
 
 .middleWhite {
@@ -1508,15 +1634,81 @@ hr#hrfrontPage {
   transition: ease 1.5;
 }
 
+.fotoKartya {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+}
+
+.fotoKartya img {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.photoShadow {
+  position: absolute;
+  width: 100%;
+  height: 460px;
+  box-shadow: inset 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
+  top: 0px;
+  left: 0;
+  border-radius: 10px 10px 5px 5px;
+}
+
+/*ehhez szerkezet: 	
+<div class="classt ahova includeolom ezt pl domborCard">  
+<div class="foto"><img src="" alt="" />
+				<div class="shadow"></div>
+		</div>
+		</div>	
+    */
+.domborCard˙:hover img {
+  transform: scale(1.1);
+}
+
+.domborCard˙ .foto {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+}
+
+.domborCard˙ .foto img {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.domborCard˙ .foto .shadow {
+  position: absolute;
+  width: 100%;
+  height: 460px;
+  box-shadow: inset 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
+  top: 0px;
+  left: 0;
+  border-radius: 10px 10px 5px 5px;
+}
+
 .imgRolamPage {
   width: 20vmax;
   height: auto;
   border: 1px solid grey;
 }
 
+#tapasztalatAboutSzovegek {
+  position: relative;
+}
+
 .imgBox {
   max-width: wmax(50vw);
   max-height: vmax(50vh);
+  margin: auto;
 }
 
 .imgBox#kep1::after {
@@ -1573,10 +1765,6 @@ hr#hrfrontPage {
   }
 }
 
-.imgBox#kep4 {
-  position: relative;
-}
-
 .imgBox#kep4::after {
   content: '';
   width: 100%;
@@ -1585,10 +1773,12 @@ hr#hrfrontPage {
   top: 1rem;
   bottom: 0;
   left: 0;
+  filter: blur(2px);
   background-image: url("..\\includes\\img\\profil\\utonKics.png");
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 0;
+  z-index: -1;
+  background-position: right;
 }
 
 @media screen and (max-width: 760px) {
@@ -1611,7 +1801,7 @@ hr#hrfrontPage {
   max-width: 13em;
   max-height: 7em;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 2px 2px 17px rgba(0, 0, 0, 0.35), 2px 2px 25px rgba(0, 0, 0, 0.5);
-  background-image: url("..\\includes\\img\\profil\\laptop-study.jpg");
+  background-image: url("..\\includes\\img\\profil\\laptop-study-nagy.jpg");
   background-size: cover;
   background-origin: border-box;
   background-clip: padding-box;
@@ -1770,6 +1960,13 @@ dd {
 
 #tapasztalatList {
   margin: 0;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  background-color: rgba(73, 73, 77, 0.4);
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 31px 5px rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+  font-weight: 500;
 }
 
 #tapasztalatList li {
@@ -1789,6 +1986,12 @@ dd {
 }
 
 #tulajdonsagList {
+  margin-left: 1rem;
+  border-radius: 6px;
+  box-shadow: 1px 3px 10px inset;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 1.5rem;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -1796,6 +1999,42 @@ dd {
   line-height: normal;
   letter-spacing: 2px;
   white-space: pre-line;
+}
+
+#tulajdonsagList:before {
+  background: url("../includes/img/bg-form.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  filter: blur(8px);
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  z-index: -1;
+}
+
+#tulajdonsagList:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+@media screen and (max-width: 760px) {
+  #tulajdonsagList {
+    color: aliceblue;
+  }
 }
 
 #tulajdonsagList li {
@@ -2283,6 +2522,10 @@ section {
   }
 }
 
+#projectBoxContainer::before {
+  opacity: 0.6;
+}
+
 .projekt_container {
   display: none;
   width: 95vw;
@@ -2341,7 +2584,7 @@ section {
   justify-items: center;
   font-size: clamp(2rem, 5vw, 5rem);
   opacity: 0.6;
-  color: #d69db5;
+  color: #49494d;
   animation-name: fadeIn;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
@@ -2744,8 +2987,9 @@ button {
 }
 
 button:hover {
-  background-color: white;
-  box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.24), 0 1rem 3.2rem 0 rgba(0, 0, 0, 0.19);
+  background-color: #e1cee358;
+  border-radius: 0;
+  box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.24), 0 1rem 3.2rem 0 rgba(0, 0, 0, 0.19), 0 0 10px #fff, 0 0 10px #fff;
 }
 
 button:active {
@@ -3122,7 +3366,7 @@ img[alt="kep_rolam"] {
   height: 100%;
   align-content: center;
   justify-content: center;
-  margin: 5px auto;
+  margin: 10px 2vh;
 }
 
 @media screen and (max-width: 760px) {
@@ -3138,18 +3382,18 @@ img[alt="kep_rolam"] {
 .site-branding .logoDiv:after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
   background-color: rgba(0, 0, 0, 0);
   background-image: url("../includes/img/logoEgyKicsi.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: local;
   background-position: center;
-  background-size: 40%;
+  background-size: 75%;
   margin: 0 0;
   border-radius: 180%;
-  box-shadow: inset 0 0 30px whitesmoke;
+  box-shadow: inset 0 0 18px whitesmoke, 0 0 20px #fff, 0 0 20px #fff;
 }
 
 @media screen and (max-width: 400px) {
@@ -3190,6 +3434,16 @@ h1.entry-title {
   animation-duration: 2000ms;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
+}
+
+#aboutDetailH1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #e7e4e4;
+}
+
+#cvAboutAcordion {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #212020;
 }
 
 /*--------------------------------------------------------------
@@ -3258,6 +3512,22 @@ h1.entry-title {
 @media screen and (max-width: 760px) {
   .gridRow {
     grid-template-columns: 1fr;
+  }
+}
+
+.gridRowValt {
+  display: grid;
+  grid-template-rows: repeat(1 minmax(100%, 1fr));
+  grid-gap: 1%;
+  margin: 0;
+  grid-auto-columns: auto-fit;
+  grid-template-columns: 100%;
+  grid-auto-rows: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .gridRowValt {
+    grid-template-columns: 100%;
   }
 }
 
@@ -3397,11 +3667,13 @@ h1.entry-title {
   z-index: -1;
   height: auto;
   background-color: #ececec;
-  background-image: url("../includes/img/aboutHatter.jpg");
+  background-image: url("../includes/img/aboutHatterNagy.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: local;
+  background-attachment: fixed;
   background-size: cover;
+  background-position-x: 40%;
 }
 
 #mastheadAbout {
@@ -3456,12 +3728,13 @@ h1.entry-title {
   grid-auto-rows: min-content;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
+  top: 0;
+  position: relative;
 }
 
 @media screen and (max-width: 1222px) {
   #mainAboutSectionId {
     grid-template-columns: 1fr;
-    position: relative;
   }
 }
 
@@ -3475,9 +3748,11 @@ h1.entry-title {
   bottom: 0;
   height: auto;
   content: "";
-  background: url("../includes/img/aboutHatter.jpg");
+  background: url("../includes/img/aboutHatterNagy.jpg");
   z-index: -1;
   opacity: 0.1;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 .aboutAcordion {
@@ -3491,15 +3766,20 @@ h1.entry-title {
   flex: 1 1 100%;
   line-height: normal;
   padding-bottom: 2vh;
-  color: #111;
+  color: #49494d;
 }
 
 .aboutAcordion:nth-of-type(1) h2,
 .aboutAcordion i,
 .aboutAcordion button {
-  color: #49494d;
+  color: #212020;
   z-index: 3;
   text-shadow: 0 1px 0 #000;
+  text-shadow: 1px 1px 1px black;
+}
+
+.aboutAcordion:nth-last-of-type(1) h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .aboutSzovegek {
@@ -3876,8 +4156,10 @@ footer p :nth-child(2) {
 
 .site-navigation div li {
   position: relative;
-  margin-top: 1%;
+  margin-top: 1vh;
   padding: 1%;
+  margin-left: 2vh;
+  margin-right: 2vh;
 }
 
 .site-navigation div li:hover > ul,
@@ -4089,13 +4371,28 @@ button#hamburgerButton {
 @media screen and (max-width: 400px) {
   .toggledMenu {
     width: 100vw;
-    background: linear-gradient(0deg, #dbdbdb 3%, silver 16%, #49494d 86%);
+    background: linear-gradient(0deg, rgba(219, 219, 219, 0.9) 3%, rgba(192, 192, 192, 0.9) 16%, rgba(73, 73, 77, 0.9) 86%);
     opacity: 0.5;
     height: 80vh;
     margin-top: 30px;
     justify-content: center;
     align-items: center;
     line-height: 4rem;
+    border-radius: 6px;
+    box-shadow: 1px 3px 10px inset;
+    box-shadow: 0 0 20px #fff, 0 0 20px #fff;
+  }
+  .toggledMenu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 111, 111, 0.2);
+    background-size: 100%;
+    filter: blur(10px);
+    z-index: -1;
   }
 }
 
@@ -4108,6 +4405,7 @@ li.active a {
 .menu li a {
   color: #eee;
   font-weight: bold;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .menu li a:visited {

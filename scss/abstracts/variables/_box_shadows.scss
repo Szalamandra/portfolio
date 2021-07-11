@@ -13,7 +13,7 @@
 
 
 $box-shadow-glow:0 0 20px #fff,0 0 20px #fff;
-
+$box-shadowDombor:inset 0px 0px 31px 5px rgba(0,0,0,0.75);
 @mixin box-shadow-glow($colorr, $bg_colorr:$color_transparent){
     box-shadow: 0 0 20px $colorr,0 0 20px $colorr;
     opacity: 1;

@@ -52,7 +52,22 @@
     @include tablet{
        grid-template-columns: 1fr;
     }
-}
+} //.gridrow
+.gridRowValt{
+  
+    @include gridRow(100%, 1, 1%);
+  margin:0;
+    grid-auto-columns: auto-fit;
+    //auto row 1 fr lesz ha a kövi sorban nem határozom meg, vagy meghatározom grid-rows: al...
+    grid-template-columns: 100%;
+    grid-auto-rows: 100%;
+    @include tablet{
+       grid-template-columns: 100%;
+    }
+} //.gridrowValt
+
+
+
 .flexRowHarom{
     display:flex;
   margin:0 auto;

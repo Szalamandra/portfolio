@@ -15,6 +15,7 @@ $color__banner_bg:rgb(163,168,164);
 //gradient background:
 $color__banner_greyGradient_linear: linear-gradient(0deg, $color__background-body 10%, rgba(163,168,164,1) 50%, $color__background_body 90%);
 $color__banner_topToBottomDark:linear-gradient(0deg, rgba(219, 219, 219,1) 3%, rgba(192,192,192,1) 16%, rgba(73,73,77,1) 86%);
+$color__banner_topToBottomDarkAtlatszo:linear-gradient(0deg, rgba(219, 219, 219,0.9) 3%, rgba(192,192,192,0.9) 16%, rgba(73,73,77,0.9) 86%);
 $gradient_footer: linear-gradient(0deg, rgba(253,203,45,1) 0%, rgba(234,131,131,1) 41%, rgba(220,91,192,1) 70%, rgba(91,156,220,1) 79%, rgba(91,220,176,0.8905311392134979) 89%);
 $gradient_footer_reverz:linear-gradient(0deg, rgba(91,220,176,0.5964134921546744) 0%, rgba(91,156,220,0.5599989263283438) 41%, rgba(220,91,192,0.5908112512583159) 60%, rgba(234,131,131,0.5740045285692401) 72%, rgba(253,203,45,0.6) 89%);
 $gradien_projekt: radial-gradient(circle, rgba(227,227,205,1) 15%, rgba(224,224,203,1) 17%, rgba(166,168,163,1) 62%);
@@ -61,3 +62,7 @@ $color_bg_java:#784421;
 
 //tables
 $color_table_bg:rgba(255, 255, 255,0.6);
+
+//titles, h1,h2 stb
+$color__text_h1Light:rgb(231, 228, 228);
+$color__text_h1:rgb(33, 32, 32);
