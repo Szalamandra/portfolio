@@ -162,6 +162,7 @@
   background-color:$color_menubackground;
   border-radius:1em;
   box-shadow: 1px 0px 10px rgb(245, 226, 190);
+  
    li {
     list-style: none;
     line-height: 1rem;
@@ -222,6 +223,10 @@ button#hamburgerButton{
     &:visited{
       background-color: $color__background-button;
     }
+    &:hover{
+      background-color: $color__hamburger-transparent;
+      border-radius: $border-radius_large;
+    }
   }
 } //hamburgerButton
 
@@ -233,24 +238,26 @@ button#hamburgerButton{
     line-height: 2em;
     text-align: left;
     width: 21vw;
+    justify-content: space-around;
   }
 .toggledMenu{
   display:flex;
   opacity:1;
   left:0;
   transition: left 3000s ease in;
-  width:100%;
+  width:50%;
   @include fadeIn(500ms);
   z-index:3;
     position: absolute;
+        height: 80vh;
     max-height: 80vh;
-    @include mobile{
+    @include mobileDetailRolamPage{
       width:100vw;
       background:$color__banner_topToBottomDarkAtlatszo;
       opacity:0.5;
       height:80vh;
       margin-top:30px;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
     line-height: 4rem;
     border-radius: $border-radius_medium;
@@ -303,6 +310,7 @@ filter: drop-shadow(2px 4px 6px black);
     max-width: 100vw;
     flex-wrap: nowrap;
     left: 25vw;
+    opacity: 0.5;
  
       li {
             position: relative;
@@ -392,6 +400,9 @@ filter: drop-shadow(2px 4px 6px black);
   content:'';
   background-color: $color__banner_topToBottomDark;
   border-radius:10px;
+  background-size: cover;
+  
+
   
 }
 
@@ -405,7 +416,7 @@ filter: drop-shadow(2px 4px 6px black);
   margin-top:1rem;
   padding:1rem;
   transition: left 3000s ease in;
-  width:50%;
+  width:60%;
   min-height:80vh;
   @include fadeIn(500ms);
   z-index:3;
@@ -419,7 +430,7 @@ filter: drop-shadow(2px 4px 6px black);
       opacity:0.5;
       height:80vh;
       margin-top:30px;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
     line-height: 4rem;
       }

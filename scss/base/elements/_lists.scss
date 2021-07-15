@@ -1,10 +1,17 @@
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	list-style-position: outside;
+	
+	
 }
 
 ul {
 	list-style: disc;
+
+		text-indent: 0rem; /* key property */
+    margin-left: 2rem; /* key property */
+	
 }
 
 ol {
@@ -38,7 +45,7 @@ dd {
 
 #tapasztalatList{
 	margin:0;
-	line-height: 2rem;
+	line-height: 3em;
     letter-spacing: 0.1rem;
 	    background-color: rgba($color__background-footer,0.4);
 		
@@ -46,7 +53,11 @@ dd {
 	box-shadow: $box-shadowDombor;
     padding: 1rem;
     font-weight: 500;
-	
+	font-size: $font__size_medium;
+	@include tablet{
+		line-height: 2em;
+		font-size: $font__size_text;
+	}
 	li{
 		list-style-type:disc;
 	
@@ -73,7 +84,7 @@ dd {
 			
 				@include tablet{
 			color:$color__text_about;
-		
+			
 			}
 	list-style-type: none;
 	display:flex;
@@ -89,6 +100,9 @@ dd {
 		>i{
 			span{
 			font-family: $font_main2;
+				
+					line-height: 2rem;
+			
 		} //span
 	}
 }

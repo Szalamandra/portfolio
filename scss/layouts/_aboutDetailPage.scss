@@ -66,7 +66,7 @@
       top: 0;
     position: relative;
   @include desktopDetailRolamPage {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
   
   }
   &:before {
@@ -104,7 +104,7 @@
   button {
     color:$color__text_h1;
     
-    z-index: 3;
+    z-index: 0;
     text-shadow: $text-shadow_black;
     text-shadow: 1px 1px 1px black;
   }
@@ -150,13 +150,50 @@
   @include desktopDetailRolamPage {
     grid-row: 1/2;
     grid-gap: 5vw;
+    
   }
-  .aboutSzovegek {
+   @include tablet {
+      grid-template-columns: 100%;
+      
+    }
+  .aboutSzovegek{
+    display:none;
+  }
+  .aboutSzovegek plusz{
     @include gridRow(1fr, 2, 1vw);
 
     @include tablet {
-      grid-template-columns: 1fr;
-    }
+      display:grid;
+      @include gridRow(100%, 1, 1vw);
+      grid-template-columns: 100% !important;
+      //5:könyves kép, 6: eszközös kép
+      @include tabletDetailRolamPage{
+      .profilText:nth-child(2){
+        grid-row:1/2;
+      }
+      .profilText:nth-child(3){
+        grid-row:2/3;
+      }
+       .profilText:nth-child(4)
+       //könyves kép
+       { 
+        grid-row:3/4;
+      }
+       .profilText:nth-child(5){
+        grid-row:4/5;
+      }
+      .profilText:nth-child(7){
+        grid-row:5/6;
+      }
+      .profilText:nth-child(6){
+        grid-row:6/7;
+      }
+      .profilText:nth-child(8){
+        grid-row:7/8;
+      }
+    } //tabletDetailRolamPage
+  }
+
   }
 }
 #aboutGrid2 {
@@ -267,6 +304,9 @@
     flex-wrap: wrap;
     display: none;
   }
+  .aboutSzovegek p{
+    font-size: $font__size_medium;
+  }
 }
 
 #aboutGrid9 {
@@ -315,6 +355,12 @@
   #kep1 {
     grid-row: span 2;
     padding-top: 2rem;
+    @include tablet{
+      grid-row: span 1;
+    }
+  }
+  @include tablet{
+    grid-template-columns: 1fr !important;
   }
  
 }

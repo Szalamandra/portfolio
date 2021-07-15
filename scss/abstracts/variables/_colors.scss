@@ -5,7 +5,8 @@ $color__background-body-a:rgba(250, 250, 250,0.1);
 $color_transparent:rgba(0,0,0,0);
 $color__background-screen: rgb(241, 241, 241);
 $color__background-hr: #ccc;
-$color__background-button: #f57b17;//rgb(243, 233, 207);
+$color__background-button: rgb(163,168,164);
+$color__background-button-transparent: rgba(163,168,164,0.5);//rgb(243, 233, 207);
 $color__background-pre: #eee;
 $color__background-ins: #f57b17;
 $color__background-footer:#49494d;
@@ -43,7 +44,9 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
-$color__hamburger:#d69db5;
+$color__hamburger:rgba(214, 157, 181,1);
+$color__hamburger-transparent:rgba(214, 157, 181,0.5);
+
 
 $color_fa-smile-wink:rgb(222, 127, 222);
 

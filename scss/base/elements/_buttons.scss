@@ -12,6 +12,8 @@ input[type="submit"] {
 
 	&:hover {
 		border-color: $color__border-button-hover;
+    border-radius: $border-radius_medium;
+    background-color: $color__background-button-transparent;
 	}
 
 	&:active,
@@ -30,7 +32,7 @@ button{
   box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.24);
   &:hover {
     background-color: #e1cee358;
-    border-radius:0;
+    border-radius:2px;
     box-shadow: 0 0.8rem 1rem 0
         rgba(0, 0, 0, 0.24),
       0 1rem 3.2rem 0 rgba(0, 0, 0, 0.19),$box-shadow-glow-min;
@@ -71,5 +73,15 @@ outline: none;
   &:focus {
     outline: 1px dashed yellow;
     outline-offset: 3px;
+  }
+}
+
+//aboutdetailpage
+#btnLetolt{
+  box-shadow: $box-shadow-glow-min;
+  background-color: rgba(163,168,164,0.7);
+  &:hover{
+    border-radius: $border_radius;
+    background-color: rgba(163,168,164,0.1);
   }
 }

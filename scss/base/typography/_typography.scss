@@ -25,14 +25,18 @@ p{
 	margin:0 1.5rem;
 	position: relative;
 	text-shadow: $text_shadow_min;
+	align-self: center;
 	p{
 		background-color: rgba((lighten($color__text-main,10%)),0.3);
 		padding:0.5rem;
 		border-radius:$border-radius_medium;
-		line-height:$font__line-height-pre;}
+		line-height:$font__line-height-body-height;}
 	@include tablet{
 			color:$color__text-main;
 			font-weight: 620;
+			display:grid;
+			grid-template-columns: 100%;
+			grid-template-rows: min-content;
 		}
 
 		//elso két blokk szöveg

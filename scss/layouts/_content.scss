@@ -55,7 +55,7 @@
 } //.gridrow
 .gridRowValt{
   
-    @include gridRow(100%, 1, 1%);
+    @include gridRow(100%, 2, 1%);
   margin:0;
     grid-auto-columns: auto-fit;
     //auto row 1 fr lesz ha a kövi sorban nem határozom meg, vagy meghatározom grid-rows: al...
@@ -167,6 +167,9 @@
   background-color: $color__text-main;
   @include port-background-image($url_bg_form,$color__text-main);
   height:100vh;
+  background-size: cover;
+    
+    background-position: center;
 
 }
 

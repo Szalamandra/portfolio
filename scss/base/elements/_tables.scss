@@ -28,6 +28,7 @@ table.display td{
   font-size: $font__size_table_desktop;
   @include tablet{
   font-size:$font__size_table;}
+  font-weight: 700;
 }
 
 table.display th{ background: lighten($color_text_highlight_light,0.4); }
