@@ -84,6 +84,9 @@ section{
   
     &:hover .middle {
         opacity: 1;
+           @include mobileDetailRolamPage{
+          opacity: 0.8;   
+        }
         }
 
     font-size:$font__size_medium;
@@ -124,6 +127,14 @@ section{
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+}
+#aboutMiddle{
+    @include mobileDetailRolamPage{
+        opacity:0.8;
+        top: 53%;
+        
+    }
 }
 
 
@@ -255,6 +266,9 @@ section{
 @include tablet{
            grid-template-rows: 1fr;
        }
+       .kisGridRow{
+           align-items: center;
+       }
     }
 //projektek
 //ez a felugró ablak igazabol projektek
@@ -323,7 +337,7 @@ section{
     background-attachment: local;
     overflow-y: auto;
    width: 200px;
-    height:200px;
+    height:300px;
 }
 #cSharpProject{
     @include port-background-image-parralax($url_bg-c,$color__background-hr);
@@ -331,7 +345,7 @@ section{
     background-size: cover;
         overflow-y: auto;
    width: 200px;
-    height:200px;
+    height:300px;
     overflow-y: auto;
 }
 
@@ -342,7 +356,7 @@ section{
     background-size: contain;
         overflow-y: auto;
    width: 200px;
-    height:200px;
+    height:300px;
     overflow-y: auto;
 }
 

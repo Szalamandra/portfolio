@@ -81,10 +81,11 @@ img[alt="kep_rolam"]{
 		border-radius:180%;
 		box-shadow: inset 0 0 18px whitesmoke, $box-shadow-glow;
 		@include mobile{
-			box-shadow: none;
-			    margin-right: 5px;
-    			left: 30vh;
-				background-size: 100%;
+			box-shadow: inset 0 0 18px whitesmoke, $box-shadow-glow;
+			    margin-right: 10px;
+    			top:15vh;
+				background-size: 70%;
+				//left:10vw;
 		}
 	}
 	}//.logo-div

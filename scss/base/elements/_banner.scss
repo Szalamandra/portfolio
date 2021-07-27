@@ -1,5 +1,5 @@
 .breakBanner{
-    height:30vh;
+    height:40vh;
     //background-color: $color__background-body;
     width:100%;
 }
@@ -19,7 +19,11 @@
         height:100%;
         width:100%;
         z-index:0;
-    opacity: 0.3;}
+    opacity: 0.3;
+        @include mobileDetailRolamPage{
+            background-size: 125%;
+        }
+}
 }
 
 #projektBanner{

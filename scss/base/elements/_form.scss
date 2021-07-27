@@ -55,7 +55,7 @@ input#nev,input#email{
 
 .contact-form {
   border-radius: 2px 2px 5px 5px;
-  padding: 10px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
   width: 90%;
   color:$color_text-main_light;
   max-width: 320px;
@@ -65,6 +65,10 @@ input#nev,input#email{
   padding-bottom: 80px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
     0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    height:95vh;
+     @include mobile{
+    height: 115vh;
+  }
   &.loading {
     button {
       max-height: 100%;
@@ -227,7 +231,7 @@ input#nev,input#email{
   }//submitBtn
   @include desktop{
     max-width:60vw;
-    height:70vh;
+    height:95vh;
   }
 
 } //contact-form
@@ -244,6 +248,7 @@ input#nev,input#email{
 }
 //hibajelentes
 .form-control{
+  
 	i.fa-smile-wink,i.fa-frown-open{
 		   font-size: 1em;
       position: absolute;
@@ -254,11 +259,17 @@ input#nev,input#email{
 	}
 	i.fa-smile-wink{
 		color:$color_fa-smile-wink;
+    
 	}
 	.hibaUzi{
 		visibility: hidden;
 		color:$color_text-highlight;
+    margin-bottom: 5px;
 	}
+  &:nth-child(3){
+    margin:0;
+
+  }
 }
 .notLoading{
 	display:none;
