@@ -1,7 +1,17 @@
+/*$desktop:1400px;
+$desktopDetailRolamPage:1222px;
+
+$tablet:760px;
+$tabletDetailRolamPage:900px;
+
+$mobileDetailRolamPage:560px;
+$mobile:400px;*/
+
 $(function () {
     //accordionok
     let abButton = $('.aboutBtn');
     let leNyil = true;
+    let profilSzovActive = false;
 
     abButton.on('click', function (e) {
         
@@ -11,7 +21,7 @@ $(function () {
             $(this).parent().next()
                 .hide(1000).removeClass('plusz');;
             $(this).prop('aria-expanded', false);
-            console.log("bekerültem kintre");
+            
         }
         else
         {
@@ -19,9 +29,24 @@ $(function () {
             $(this).parent().next()
                 .show().animate().addClass('plusz');
             $(this).prop('aria-expanded', true);
-            console.log("bekerültem");
+            /*profilos ablak grid legyen*/
+            if ($(abButton[0]).parent().next().hasClass('plusz') && window.innerWidth > 770) {
+                $("#profilSzov").css("display", "grid");
+                profilSzovActive = true;
+            }
+            else if ($(abButton[0]).parent().next().hasClass('plusz') && window.innerWidth < 770) {
+                $("#profilSzov").css("display", "block");
+                profilSzovActive = true;
+            }
+            else {
+                $("#profilSzov").css("display", "none");
+                profilSzovActive =false;
+            }
+
+            
         }
-        if (leNyil == true) {
+        if (leNyil == true ) {
+            console.log("bekerültem");
             $(this).html("<i class='fas fa-chevron-up'></i>");
             leNyil = false;
         }
@@ -44,37 +69,24 @@ $(function () {
         }
     }
 
+//ha közben változik a window, profilszöveg layoutja:
+    $(window).resize(function () {
+        if (window.innerWidth < 770 && profilSzovActive == true) {
+             $("#profilSzov").css("display", "block");
+        }
+        if (window.innerWidth > 770 && profilSzovActive == true) {
+             $("#profilSzov").css("display", "grid");
+        }
+        if ( profilSzovActive == false) {
+             $("#profilSzov").css("display", "none");
+        }
+        
 
-
+    });
+ 
 
 
 });/*document.ready*/
 
 
 
-/*acButton.on('click', function (e) {
-
-//aboutszovegek kivalasztasa
-$(this).parent().next()
-    .slideToggle(() => {
-        $(this).parent().next()
-            .toggleClass("plusz").css("display", "flex")
-    })
-    ;
-
-
-if (e.target == $("#profilSzov")) {
-    $("#profilSzov").css("display", "grid");
-}
-
-if (leNyil == true) {
-    $(this).html("<i class='fas fa-chevron-up'></i>");
-    leNyil = false;
-}
-else {
-    $(this).html("<i class='fas fa-chevron-down'></i>");
-    leNyil = true;
-}
-    })
-
-*/

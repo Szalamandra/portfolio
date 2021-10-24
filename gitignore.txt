@@ -6,3 +6,4 @@ libs/
 .build*
 particles.min.js
 jegyzet/
+portfolioProduction.zip

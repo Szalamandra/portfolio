@@ -22,7 +22,7 @@ $('document').ready(function () {
   
   }
   function buttonFelold() {
-    console.log("probalom");
+    
     if (validNev == true && validEmail == true) {
       console.log("igeeen");
       submitBtn.removeAttr("disabled");
@@ -36,7 +36,7 @@ $('document').ready(function () {
   function h1HatraKuldes() {
     nyitoProjektWebBtn.css({ "z-index": 8 });
     szoftProject.css({ "z-index": 8 });
-  };
+  }
   function boxFunctionsNyitasnal() {
     h1HatraKuldes();
     bodyScrollOff();
@@ -102,11 +102,11 @@ $('document').ready(function () {
 
   });
   
-  function simpleBarToggle() {
+  /*function simpleBarToggle() {
      if ($(window).width() < 500) {
       simpleBarBox[0].toggleAttribute('data-simplebar');
     }
-  };
+  };*/
 
 
   closeButtonWeb.on('click', function (e) {
@@ -145,26 +145,26 @@ $('document').ready(function () {
   //#nev ellenorzese
   $(inputs[0]).focusout(() => {
     if ($(inputs[0]).val().trim() == "") {
-      $(inputs[0]).css("border","3px solid red");
+      $(inputs[0]).css({ "border": "3px solid red" }).animate({"border-left-width": "35px"});
+      //$(form_controls[0] + " input").animate({ "left-border-width": "35px" });
       $(form_controls[0]).children("i.fa-frown-open")
          .animate({ 'left': '30px' })
         .css({ 'opacity': 1, 'color': 'red' });
       $(form_controls[0]).children("i.fa-smile-wink")
         .animate({ 'left': '0' })
         .css({ 'opacity': 0 });
-      $(this).css({ "color": "red", 'padding-left': '30px' });
+      $(this).css({ "color": "red", 'padding-left': '30px', "border-left-width": "35px" });
       $(form_controls[0]).children('p').css("visibility", "visible");
       validNev = false; 
     }
     else {
-      $(this).css("border","3px solid purple");
-      $(form_controls[0]).children("i.far.fa-smile-wink")
-        .animate({ 'left': '30px' })
+      $(form_controls[0]).children("i.fa-smile-wink")
+        .animate({ left: '30px' })
         .css({ 'opacity': 1, 'color': 'purple' });
       $(form_controls[0]).children("i.fa-frown-open")
-        .animate({ 'left': 0})
+        .animate({ left: '0'})
         .css({ 'opacity': 0 });
-      $(inputs[0]).css({"color": "rgb(222, 127, 222)","padding-left":'30px',"border":"rgb(222, 127, 222)"});
+      $(inputs[0]).css({"color": "rgb(222, 127, 222)","border":"2px solid rgb(222, 127, 222)"}).animate({"border-left-width": "35px"});
       $(form_controls[0]).children('p').css("visibility", "hidden");
        validNev = true;
        
@@ -174,7 +174,7 @@ $('document').ready(function () {
 //email ellenőrzése
    $(inputs[1]).focusout(() => {
     if ($(inputs[1]).val() == "" || !emailReg.test($(inputs[1]).val())) {
-      $(inputs[1]).css("border","3px solid red");
+      $(inputs[1]).css("border","3px solid red").animate({"border-left-width": "35px"});
       $(form_controls[1]).children("i.fa-frown-open")
          .animate({ left: '30px' })
         .css({ 'opacity': 1, 'color': 'red' });
@@ -192,7 +192,7 @@ $('document').ready(function () {
       $(form_controls[1]).children("i.fa-frown-open")
         .animate({ left: '0'})
         .css({ 'opacity': 0 });
-      $(inputs[1]).css({"color": "rgb(222, 127, 222)","padding-left":'30px',"border":"rgb(222, 127, 222)"});
+      $(inputs[1]).css({"color": "rgb(222, 127, 222)","border":"2px solid rgb(222, 127, 222)"}).animate({"border-left-width": "35px"});
       $(form_controls[1]).children('p').css("visibility", "hidden");
       validEmail = true;
       
@@ -245,6 +245,7 @@ $('.contact-form').on('submit', function(e) {
 
   setTimeout(function() {
     $this.addClass('ok');
+    
     $state.html('Üzenet elküldve!');
     setTimeout(function() {
       $state.html('Küldés');

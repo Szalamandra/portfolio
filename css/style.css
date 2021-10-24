@@ -1277,7 +1277,7 @@ body #foCimDiv h1, body #foCimDiv hr, body #foCimDiv h2 {
 }
 
 .breakBanner {
-  height: 30vh;
+  height: 40vh;
   width: 100%;
 }
 
@@ -1302,6 +1302,12 @@ body #foCimDiv h1, body #foCimDiv hr, body #foCimDiv h2 {
   width: 100%;
   z-index: 0;
   opacity: 0.3;
+}
+
+@media screen and (max-width: 560px) {
+  #rolamBanner::before {
+    background-size: 125%;
+  }
 }
 
 #projektBanner {
@@ -2453,6 +2459,12 @@ section {
   opacity: 1;
 }
 
+@media screen and (max-width: 560px) {
+  #rolamCimSzoveg:hover .middle {
+    opacity: 0.8;
+  }
+}
+
 @media screen and (max-width: 760px) {
   #rolamCimSzoveg {
     font-size: clamp(1rem, 1.25vw, 1.25rem);
@@ -2496,6 +2508,13 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+  #aboutMiddle {
+    opacity: 0.8;
+    top: 53%;
+  }
 }
 
 #szoftProject::before, #webProject::before {
@@ -2649,6 +2668,10 @@ section {
   }
 }
 
+#projectContainerFoOldal .kisGridRow {
+  align-items: center;
+}
+
 #projectBoxContainer {
   display: grid;
   grid-row: 30vh;
@@ -2746,7 +2769,7 @@ section {
   background-attachment: local;
   overflow-y: auto;
   width: 200px;
-  height: 200px;
+  height: 300px;
 }
 
 #cSharpProject {
@@ -2759,7 +2782,7 @@ section {
   background-size: cover;
   overflow-y: auto;
   width: 200px;
-  height: 200px;
+  height: 300px;
   overflow-y: auto;
 }
 
@@ -2773,7 +2796,7 @@ section {
   background-size: contain;
   overflow-y: auto;
   width: 200px;
-  height: 200px;
+  height: 300px;
   overflow-y: auto;
 }
 
@@ -2920,6 +2943,13 @@ i.fas.fa-bars.toggle {
   font-size: 2em;
   text-indent: 0;
   padding: 0 1rem;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 760px) {
+  .programIkons > i {
+    font-size: 1.5em;
+  }
 }
 
 .aboutAcordion > i {
@@ -2972,6 +3002,17 @@ a:hover, a:active {
 
 #tovabbLink :hover {
   color: bisque;
+}
+
+@media screen and (max-width: 400px) {
+  #tovabbLink {
+    position: relative;
+    top: 0;
+    color: #49494d;
+  }
+  #tovabbLink :hover {
+    color: #a3a8a4;
+  }
 }
 
 #formazatlanLink {
@@ -3166,7 +3207,7 @@ input#nev:focus, input#email:focus {
 
 .contact-form {
   border-radius: 2px 2px 5px 5px;
-  padding: 10px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
   width: 90%;
   color: #e3e3cd;
   max-width: 320px;
@@ -3175,6 +3216,13 @@ input#nev:focus, input#email:focus {
   z-index: 0;
   padding-bottom: 80px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  height: 95vh;
+}
+
+@media screen and (max-width: 400px) {
+  .contact-form {
+    height: 115vh;
+  }
 }
 
 .contact-form.loading button {
@@ -3335,7 +3383,7 @@ input#nev:focus, input#email:focus {
 @media screen and (max-width: 1400px) {
   .contact-form {
     max-width: 60vw;
-    height: 70vh;
+    height: 95vh;
   }
 }
 
@@ -3366,6 +3414,11 @@ input#nev:focus, input#email:focus {
 .form-control .hibaUzi {
   visibility: hidden;
   color: #Df6747;
+  margin-bottom: 5px;
+}
+
+.form-control:nth-child(3) {
+  margin: 0;
 }
 
 .notLoading {
@@ -3473,10 +3526,10 @@ img[alt="kep_rolam"] {
 
 @media screen and (max-width: 400px) {
   .site-branding .logoDiv:after {
-    box-shadow: none;
-    margin-right: 5px;
-    left: 30vh;
-    background-size: 100%;
+    box-shadow: inset 0 0 18px whitesmoke, 0 0 20px #fff, 0 0 20px #fff;
+    margin-right: 10px;
+    top: 15vh;
+    background-size: 70%;
   }
 }
 
@@ -3728,6 +3781,12 @@ h1.entry-title {
   background-position: center;
 }
 
+@media screen and (max-width: 400px) {
+  #formSection {
+    height: 120vh;
+  }
+}
+
 #aboutBody {
   width: 100vw;
   position: relative;
@@ -3745,7 +3804,7 @@ h1.entry-title {
   z-index: -1;
   height: auto;
   background-color: #ececec;
-  background-image: url("../includes/img/aboutHatterNagy.jpg");
+  background-image: url("../includes/img/aboutHatter.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: local;
@@ -3826,7 +3885,7 @@ h1.entry-title {
   bottom: 0;
   height: auto;
   content: "";
-  background: url("../includes/img/aboutHatterNagy.jpg");
+  background: url("../includes/img/aboutHatter.jpg");
   z-index: -1;
   opacity: 0.1;
   background-attachment: fixed;
